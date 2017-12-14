@@ -1,0 +1,23 @@
+<section id="contacts">
+  <div class="contacts-wrapper">
+    <agm-map id="contacts-map" [latitude]="lat" [longitude]="lng" class="map" [zoom]=15 class="map">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+    <div class="container contacts-on-map-container">
+      <div class="contacts-on-map">
+        <h3>Location</h3>
+
+        <ul class="list">
+          <li>
+            <i class="fa fa-map-marker"></i>881 7th Ave New York, NY</li>
+          <li>
+            <i class="fa fa-envelope"></i>info@ventcamp.com</li>
+          <li>
+            <i class="fa fa-phone"></i>(518) 457-5181 10001</li>
+          <li>
+            <i class="fa fa-clock-o"></i>7:30 - 22:00</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

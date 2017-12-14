@@ -6384,7 +6384,7 @@ button[type="submit"] .loading {
   display: inline-block;
   padding: 7px 0;
   font-family: "PT Sans Caption", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.26em;
@@ -6542,6 +6542,7 @@ button[type="submit"] .loading {
   }
   .navigation-container {
     padding: 0;
+    margin-left: 50px;
     text-align: center;
   }
   .navbar-collapse {
