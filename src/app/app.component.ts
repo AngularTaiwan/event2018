@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  endDate = new Date(2018, 10, 24);
+  eventDate = new Date(2018, 10, 24, 12, 0, 0, 0);
 }

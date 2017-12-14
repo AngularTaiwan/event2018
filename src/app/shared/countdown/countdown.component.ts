@@ -43,7 +43,7 @@ export class CountdownComponent implements OnInit, OnChanges, OnDestroy {
         return {
           ...result,
           dnn: result.dnn.toString().padStart(3, '0'),
-          hnn: result.dnn.toString().padStart(2, '0'),
+          hnn: result.hnn.toString().padStart(2, '0'),
           mnn: result.mnn.toString().padStart(2, '0'),
           snn: result.snn.toString().padStart(2, '0')
         };
