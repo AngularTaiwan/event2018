@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   eventDate = new Date(2018, 10, 24, 12, 0, 0, 0);
+  lat = 24.323792;
+  lng = 120.696616;
 }
