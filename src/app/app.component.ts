@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
   eventDate = new Date(2018, 10, 24, 12, 0, 0, 0);
 }
