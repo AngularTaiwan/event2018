@@ -27,7 +27,7 @@ export class AnchorClickDirective {
     const offsetTop = section.offsetTop - header.clientHeight,
       $nav = [].slice.call(document.querySelectorAll('.navigation-link[href*="#"]'));
 
-    // TODO: 改成 Angular的方式
+    // 這裡是可以不使用 Jquery 來處理，指是這樣子弄比較快
     $('body, html').animate(
       {
         scrollTop: offsetTop
@@ -45,5 +45,6 @@ export class AnchorClickDirective {
       }
     );
   }
+
   constructor(private el: ElementRef, private renderer2: Renderer2) {}
 }
