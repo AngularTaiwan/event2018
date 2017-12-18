@@ -5,11 +5,11 @@ import { HeaderComponent } from './header/header.component';
 import { AgmCoreModule } from '@agm/core';
 
 import { AnchorClickDirective } from './anchor-click.directive';
-
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [CommonModule, AgmCoreModule],
-  declarations: [CountdownComponent, HeaderComponent, AnchorClickDirective],
-  exports: [CountdownComponent, HeaderComponent, AnchorClickDirective]
+  declarations: [CountdownComponent, HeaderComponent, AnchorClickDirective, FooterComponent],
+  exports: [CountdownComponent, HeaderComponent, AnchorClickDirective, FooterComponent]
 })
 export class SharedModule {}
