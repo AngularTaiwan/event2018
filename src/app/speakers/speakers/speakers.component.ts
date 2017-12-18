@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SpeakersService } from '../speakers.service';
+import { ISpeaker } from '../speaker';
 
 @Component({
   selector: 'app-speakers',
@@ -6,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./speakers.component.css']
 })
 export class SpeakersComponent implements OnInit {
-  constructor() {}
+  speakers: ISpeaker[];
+  constructor(private speakerService: SpeakersService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.speakers = this.speakerService.speakers();
+  }
 }
