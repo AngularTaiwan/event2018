@@ -1532,6 +1532,9 @@
 .fa-tencent-weibo:before {
   content: "\f1d5";
 }
+.fa-telegram:before {
+  content: "\f2c6";
+}
 .fa-qq:before {
   content: "\f1d6";
 }
