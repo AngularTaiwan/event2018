@@ -2648,7 +2648,7 @@ li {
 }
 @media (max-width: 767px) {
   body {
-    padding-top: 91px;
+    /* padding-top: 91px; */
   }
   .fullwidth-section-bg {
     position: relative;
