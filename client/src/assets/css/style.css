@@ -1532,6 +1532,9 @@
 .fa-tencent-weibo:before {
   content: "\f1d5";
 }
+.fa-telegram:before {
+  content: "\f2c6";
+}
 .fa-qq:before {
   content: "\f1d6";
 }
@@ -2648,7 +2651,7 @@ li {
 }
 @media (max-width: 767px) {
   body {
-    /* padding-top: 91px; */
+    padding-top: 91px;
   }
   .fullwidth-section-bg {
     position: relative;
@@ -4997,7 +5000,7 @@ button[type="submit"] .loading {
   color: #ffffff;
 }
 .package-column .package-price {
-  font-size: 70px;
+  font-size: 60px;
   font-family: "PT Sans Caption", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 700;
   line-height: 1;
@@ -6384,7 +6387,7 @@ button[type="submit"] .loading {
   display: inline-block;
   padding: 7px 0;
   font-family: "PT Sans Caption", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.26em;
@@ -6542,6 +6545,7 @@ button[type="submit"] .loading {
   }
   .navigation-container {
     padding: 0;
+    margin-left: 50px;
     text-align: center;
   }
   .navbar-collapse {
