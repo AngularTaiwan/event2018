@@ -23,7 +23,6 @@ export class CountdownComponent implements OnInit, OnChanges, OnDestroy {
     this._endDate = moment(this.endDate);
   }
   ngOnInit() {
-    console.log(this._endDate);
     this.countDown$ = timer(0, 1000).pipe(
       takeUntil(this.destroy$),
       map(() => {
