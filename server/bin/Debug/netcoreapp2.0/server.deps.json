@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "f2f76ddefe6375f7c1a6b0853dfbb4ddc9c58752"
+    "signature": "3f2b1f31a54e26869b49529aed51b907c3554ef4"
   },
   "compilationOptions": {
     "defines": [
@@ -25,7 +25,8 @@
         "dependencies": {
           "Galamai.AspNetCore.Rendertron": "0.0.2",
           "Microsoft.AspNetCore.All": "2.0.5",
-          "Microsoft.NETCore.App": "2.0.0"
+          "Microsoft.NETCore.App": "2.0.0",
+          "WindowsAzure.Storage": "8.5.0"
         },
         "runtime": {
           "server.dll": {}
@@ -587,7 +588,7 @@
       "Microsoft.AspNetCore.DataProtection.AzureStorage/2.0.1": {
         "dependencies": {
           "Microsoft.AspNetCore.DataProtection": "2.0.1",
-          "WindowsAzure.Storage": "8.1.4"
+          "WindowsAzure.Storage": "8.5.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.AzureStorage.dll": {}
@@ -3793,7 +3794,7 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
-      "WindowsAzure.Storage/8.1.4": {
+      "WindowsAzure.Storage/8.5.0": {
         "dependencies": {
           "Microsoft.Data.OData": "5.8.2",
           "NETStandard.Library": "2.0.0",
@@ -5993,12 +5994,12 @@
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
     },
-    "WindowsAzure.Storage/8.1.4": {
+    "WindowsAzure.Storage/8.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-W6ZZ0/o7+3Qb77mRAQyLjPudHG3OMeeQ4p9yY13PUdJArmRCx2cLMm5F4tpIjJXxzHC0ew0oK7DMDGILMdfCnw==",
-      "path": "windowsazure.storage/8.1.4",
-      "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
+      "sha512": "sha512-m+G55ljrj0nV9MCjqiGbkr008t+IzkT5oJtu+gPzUgdP2d7CHnyFKUe6E3msA204ldJjQsoLCT0oHFeC7T2D4g==",
+      "path": "windowsazure.storage/8.5.0",
+      "hashPath": "windowsazure.storage.8.5.0.nupkg.sha512"
     },
     "Microsoft.NETCore.App/2.0.0": {
       "type": "package",
