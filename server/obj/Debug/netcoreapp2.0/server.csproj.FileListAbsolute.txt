@@ -8,3 +8,4 @@ E:\projects\event2018\server\obj\Debug\netcoreapp2.0\server.AssemblyInfoInputs.c
 E:\projects\event2018\server\obj\Debug\netcoreapp2.0\server.AssemblyInfo.cs
 E:\projects\event2018\server\obj\Debug\netcoreapp2.0\server.dll
 E:\projects\event2018\server\obj\Debug\netcoreapp2.0\server.pdb
+E:\projects\event2018\server\obj\Debug\netcoreapp2.0\server.csprojResolveAssemblyReference.cache

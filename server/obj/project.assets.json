@@ -4745,7 +4745,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "WindowsAzure.Storage/8.1.4": {
+      "WindowsAzure.Storage/8.5.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Data.OData": "5.8.2",
@@ -12528,10 +12528,10 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
-    "WindowsAzure.Storage/8.1.4": {
-      "sha512": "W6ZZ0/o7+3Qb77mRAQyLjPudHG3OMeeQ4p9yY13PUdJArmRCx2cLMm5F4tpIjJXxzHC0ew0oK7DMDGILMdfCnw==",
+    "WindowsAzure.Storage/8.5.0": {
+      "sha512": "m+G55ljrj0nV9MCjqiGbkr008t+IzkT5oJtu+gPzUgdP2d7CHnyFKUe6E3msA204ldJjQsoLCT0oHFeC7T2D4g==",
       "type": "package",
-      "path": "windowsazure.storage/8.1.4",
+      "path": "windowsazure.storage/8.5.0",
       "files": [
         "lib/net45/Microsoft.WindowsAzure.Storage.dll",
         "lib/net45/Microsoft.WindowsAzure.Storage.pdb",
@@ -12546,7 +12546,7 @@
         "lib/wp8/Microsoft.WindowsAzure.Storage.pdb",
         "lib/wpa/Microsoft.WindowsAzure.Storage.dll",
         "lib/wpa/Microsoft.WindowsAzure.Storage.pdb",
-        "windowsazure.storage.8.1.4.nupkg.sha512",
+        "windowsazure.storage.8.5.0.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
     }
@@ -12555,7 +12555,8 @@
     ".NETCoreApp,Version=v2.0": [
       "Galamai.AspNetCore.Rendertron >= 0.0.2",
       "Microsoft.AspNetCore.All >= 2.0.5",
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "WindowsAzure.Storage >= 8.5.0"
     ]
   },
   "packageFolders": {
@@ -12564,6 +12565,9 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "E:\\projects\\event2018\\server\\server.csproj",
       "projectName": "server",
@@ -12612,6 +12616,10 @@
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
+          },
+          "WindowsAzure.Storage": {
+            "target": "Package",
+            "version": "[8.5.0, )"
           }
         },
         "imports": [
