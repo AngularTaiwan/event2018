@@ -1,9 +1,6 @@
 import { Component, OnInit, OnChanges, OnDestroy, Input } from '@angular/core';
 import * as moment from 'moment/moment';
-import { Subject } from 'rxjs/Subject';
-import { Observable } from 'rxjs/Observable';
-import { combineLatest } from 'rxjs/observable/combineLatest';
-import { timer } from 'rxjs/observable/timer';
+import { Subject ,  Observable ,  combineLatest ,  timer } from 'rxjs';
 import { takeUntil, map, shareReplay } from 'rxjs/operators';
 @Component({
   selector: 'app-countdown',
