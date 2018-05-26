@@ -1,7 +1,9 @@
-agm-map {
-  height: 560px;
-}
-
-.main-title {
-  color: #fa0;
+:host{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
