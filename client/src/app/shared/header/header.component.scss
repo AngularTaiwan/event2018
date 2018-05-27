@@ -1,7 +1,23 @@
+@import 'node_modules/@angular/material/theming';
+
 :host {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
+  color: white;
+  mat-toolbar {
+    height: auto;
+  }
+}
+.buy-ticket {
+  background-color: map-get($mat-indigo, 500);
+  color: white;
+  letter-spacing: 1.25px;
+
+  @media (min-width: 576px) {
+    width: 160px;
+
+   }
 }

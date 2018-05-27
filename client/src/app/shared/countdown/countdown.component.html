@@ -1,49 +1,46 @@
-<div class="row counters-wrapper countdown">
-  <div class="col-sm-3">
-    <div class="counter-block counter-block-no-border counter-block-white has-separator">
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count">{{ (countDown$ | async)?.dnn}}</span>
-
-          <p class="title">days</p>
-        </div>
-      </div>
+<div class="px-2 offset-md-2 d-flex justify-content-center">
+  <div class="d-flex flex-column">
+    <!-- <div class="shadow-101"></div>
+    <img class="build-101" src="/assets/images/intro101.svg"> -->
+    <div class="desc">Advance conference about</div>
+    <div class="title d-flex flex-wrap">
+      <img width="72px" height="72px" src="/assets/images/logo.svg">
+      <h1>ngular&nbsp;</h1>
+      <h1 class="pl-sm-2">development</h1>
     </div>
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title>
+          距離
+          <span class="first">台灣第一個 Angular Conference</span>
+          還有
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row no-gutters timer">
+          <div class="col text-center">
+            <h1 class="mat-h1">{{ (countDown$ | async)?.dnn}}</h1>
+            <p class="duration">days</p>
+          </div>
+          <div class="col text-center">
+            <h1 class="mat-h1">{{ (countDown$ | async)?.hnn}}</h1>
+            <p class="duration">hours</p>
+          </div>
+          <div class="col text-center">
+            <h1 class="mat-h1">{{ (countDown$ | async)?.mnn}}</h1>
+            <p class="duration">minutes</p>
+
+          </div>
+          <div class="col text-center">
+            <h1 class="mat-h1">{{ (countDown$ | async)?.snn}}</h1>
+            <p class="duration">seconds</p>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
   </div>
 
-  <div class="col-sm-3">
-    <div class="counter-block counter-block-no-border counter-block-white has-separator">
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count">{{ (countDown$ | async)?.hnn }}</span>
-
-          <p class="title">hours</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-3">
-    <div class="counter-block counter-block-no-border counter-block-white has-separator">
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count">{{ (countDown$ | async)?.mnn }}</span>
-
-          <p class="title">minutes</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-3">
-    <div class="counter-block counter-block-no-border counter-block-white">
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count">{{ (countDown$ | async)?.snn }}</span>
-
-          <p class="title">seconds</p>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+<div class="text-center">
+  <button class="arrow" mat-mini-fab><mat-icon>keyboard_arrow_down</mat-icon></button>
 </div>

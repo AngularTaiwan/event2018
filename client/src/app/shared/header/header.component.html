@@ -1,7 +1,25 @@
-<mat-toolbar color="primary" class="row fixed-header mat-elevation-z6">
-  <div class="col-auto mr-auto row">
+<mat-toolbar color="primary" class="py-3 px-2 px-lg-5 fixed-header mat-elevation-z6">
+  <div class="d-flex align-items-center">
     <img src="/assets/images/logo.svg">
-    <h1 class="p-2">Angular Taiwan</h1>
+    <h1 class="pl-sl-2">Angular Taiwan</h1>
   </div>
-  <div class="col-auto">BUY TICKET</div>
+  <div class="ml-auto p-0">
+    <a class="d-none d-md-inline-block" href="#" mat-button>講者</a>
+    <a class="d-none d-md-inline-block" href="#" mat-button>議程</a>
+    <a class="d-none d-md-inline-block" href="#" mat-button>票種</a>
+    <a class="d-none d-md-inline-block" href="#" mat-button>地點</a>
+    <a class="d-none d-lg-inline-block" href="#" mat-button>共筆</a>
+    <button class="buy-ticket" mat-raised-button>BUY TICKET</button>
+    <mat-menu #appMenu="matMenu">
+      <a class="d-md-none" href="#" mat-menu-item>講者</a>
+      <a class="d-md-none" href="#" mat-menu-item>議程</a>
+      <a class="d-md-none" href="#" mat-menu-item>票種</a>
+      <a class="d-md-none" href="#" mat-menu-item>地點</a>
+      <a href="#" mat-menu-item>共筆</a>
+    </mat-menu>
+
+    <button class="d-inline-block d-lg-none " mat-icon-button [matMenuTriggerFor]="appMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
