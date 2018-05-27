@@ -26,9 +26,7 @@ import { SpeakersModule } from './speakers/speakers.module';
       enabled: environment.production
     }),
 
-    BrowserAnimationsModule,
-    MatButtonModule
-
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
