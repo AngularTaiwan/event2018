@@ -1,9 +1,42 @@
 <app-header></app-header>
 <section class="intro">
+  <div class="shadow-101"></div>
+  <img class="building-101" src="/assets/images/intro101.svg">
+  <div class="h-100 d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <header class="px-2 offset-md-2 offset-lg-5">
+          <div class="desc">Advance conference about</div>
+          <div class="title">
+            <img width="72px" height="72px" src="/assets/images/logo.svg">
+            <h1>ngular</h1>
+            <h1 class="pl-sm-3">development</h1>
+          </div>
+          <app-countdown [endDate]="eventDate"></app-countdown>
+        </header>
+      </div>
+    </div>
+  </div>
 
 </section>
 <section class="speaker">
+  <h1 class="text-center">Speakers</h1>
+  <div class="d-flex">
+      <mat-card class="example-card" *ngFor="let item of []">
 
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
+              very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+  </div>
 </section>
 
 <!-- <app-countdown [endDate]="eventDate"></app-countdown> -->

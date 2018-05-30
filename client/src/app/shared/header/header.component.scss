@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 99;
   color: white;
 }
 .buy-ticket {
@@ -25,5 +25,6 @@
   right: 16px;
   background-color: map-get($mat-indigo, 500);
   color: white;
+  z-index: 98;
 
 }

@@ -1,83 +1,28 @@
-@import 'node_modules/@angular/material/theming';
+.card {
+  margin-top:36px;
+  padding: 8px 12px;
 
-:host {
-  height: 400px;
+  mat-card-header {
+    font-size: 16px;
+    color: rgba(1, 22, 39, 0.6);
+    letter-spacing: 0.25px;
+    line-height: 20px;
 
-  padding-top: 30px;
-  @media (min-width: 576px) {
-    padding-top: 122px;
-  }
-
-  background-color: map-get($mat-indigo, 700);
-  color: white;
-
-  .desc {
-    font-family: Sansation-Light;
-    font-size: 24px;
-    letter-spacing: 0.18px;
-  }
-
-  .title {
-    margin-top: 10px;
-
-    h1 {
-      font-family: Sansation-Regular;
-      font-size: 48px;
-      font-weight: normal;
-      letter-spacing: -0.4px;
-      margin: 0;
+    .first {
+      color: rgba(1, 22, 39, 1);
     }
   }
 
-  .card {
-    margin-top: 36px;
-    padding: 10px 16px;
-    max-width: 368px;
-
-    mat-card-header {
+  .timer {
+    font-size: 24px;
+    color: rgba(1, 22, 39, 0.87);
+    .duration {
+      margin: 10px 0px;
+      opacity: 0.6;
       font-size: 14px;
       color: rgba(1, 22, 39, 0.6);
-      letter-spacing: 0.25px;
-      line-height: 20px;
-
-      .first {
-        color: rgba(1, 22, 39, 1);
-      }
+      letter-spacing: 0.4px;
+      line-height: 16px;
     }
-
-    .timer {
-      font-size: 24px;
-      color: rgba(1, 22, 39, 0.87);
-      .duration {
-        margin: 10px 0px;
-        opacity: 0.6;
-        font-size: 12px;
-        color: rgba(1, 22, 39, 0.6);
-        letter-spacing: 0.4px;
-        line-height: 16px;
-      }
-    }
-  }
-  .arrow {
-    margin-top: 20px;
-    @media (min-width: 576px) {
-      margin-top: 60px;
-    }
-    background: rgba(255, 255, 255, 0.1);
-  }
-  .shadow-101 {
-    background: rgba(0, 0, 0, 0.1);
-    display: flex;
-    margin-top: 160px;
-    width: 21vw;
-    height: 438px;
-    -webkit-clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
-  }
-  .build-101 {
-    z-index: 1;
-    margin-left: -92px;
-    display: flex;
-    margin-top: 160px;
   }
 }
