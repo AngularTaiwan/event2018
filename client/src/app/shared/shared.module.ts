@@ -8,8 +8,9 @@ import { CountdownComponent } from './countdown/countdown.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
+const materialModule = [MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatCardModule];
 @NgModule({
-  imports: [CommonModule, AgmCoreModule, MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatCardModule],
+  imports: [CommonModule, AgmCoreModule, materialModule],
   declarations: [
     CountdownComponent,
     HeaderComponent,
@@ -20,7 +21,8 @@ import { HeaderComponent } from './header/header.component';
     CountdownComponent,
     HeaderComponent,
     AnchorClickDirective,
-    FooterComponent
+    FooterComponent,
+    materialModule
   ]
 })
 export class SharedModule {}

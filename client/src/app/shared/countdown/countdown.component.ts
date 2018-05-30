@@ -8,9 +8,9 @@ import { takeUntil, map, shareReplay, takeWhile } from 'rxjs/operators';
   styleUrls: ['./countdown.component.scss']
 })
 export class CountdownComponent implements OnInit, OnDestroy {
+  _endDate: moment.Moment;
   @Input() endDate;
 
-  _endDate;
 
   destroy$ = new Subject();
   countDown$: Observable<{
@@ -26,7 +26,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
     this._endDate = moment(this.endDate);
     this.countDown$ = timer(0, 1000).pipe(
       takeUntil(this.destroy$),
-      map(t => this._endDate.diff(moment(), 'seconds') - t),
+      map(t => this._endDate.diff(moment(), 'seconds')),
       takeWhile(rs => rs >= 0),
       map(remainSec => {
         const result = {
