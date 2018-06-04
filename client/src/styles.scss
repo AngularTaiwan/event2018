@@ -2,6 +2,16 @@
 body {
   margin: 0;
 }
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 // Boostrap
 @import 'node_modules/bootstrap/scss/functions';
 @import 'node_modules/bootstrap/scss/variables';
@@ -15,23 +25,22 @@ body {
 // Plus imports for other components in your app.
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 
-
 @font-face {
-  font-family: Sansation-Light;
+  font-family: 'Sansation-Light';
   src: url(/assets/fonts/sansation/Sansation_Light.ttf);
 }
 @font-face {
-  font-family: Sansation-Regular;
+  font-family: 'Sansation-Regular';
   src: url(/assets/fonts/sansation/Sansation_Regular.ttf);
 }
 @font-face {
-  font-family: Sansation-Bold;
+  font-family: 'Sansation-Bold';
   src: url(/assets/fonts/sansation/Sansation_Bold.ttf);
 }
 
 $default-font-familys: 'Noto Sans TC', 'Helvetica Neue', sans-serif;
 $ngtw-typography: mat-typography-config(
-  quote(join(Sansation-Regular, $default-font-familys))
+  quote(join('Sansation-Regular', $default-font-familys))
 );
 
 @include mat-core($ngtw-typography);
@@ -43,3 +52,11 @@ $ngtw-warn: mat-palette($mat-red);
 $ngtw-theme: mat-light-theme($ngtw-primary, $ngtw-accent, $ngtw-warn);
 
 @include angular-material-theme($ngtw-theme);
+
+.topic {
+  font-family: Sansation-Regular;
+  font-size: 48px;
+  color: rgba(0, 0, 0, 0.87);
+  letter-spacing: -0.4px;
+  text-align: left;
+}

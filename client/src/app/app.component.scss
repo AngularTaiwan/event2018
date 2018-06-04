@@ -39,7 +39,7 @@
   header {
     z-index: 3;
     .desc {
-      font-family: Sansation-Light;
+      font-family: 'Sansation-Light';
       font-size: 24px;
       letter-spacing: 0.18px;
     }
@@ -49,26 +49,15 @@
       flex-wrap: wrap;
 
       h1 {
-        font-family: Sansation-Regular;
+        font-family: 'Sansation-Regular';
         font-size: 48px;
         font-weight: normal;
         letter-spacing: -0.4px;
         margin: 0;
       }
     }
-
   }
-
-
 }
 
 
 
-.example-card {
-  max-width: 300px;
-  min-height: 400px;
-}
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
