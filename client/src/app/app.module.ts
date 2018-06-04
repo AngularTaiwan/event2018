@@ -15,9 +15,10 @@ import { PriceModule } from './price/price.module';
 import { ScheduleModule } from './schedule/schedule.module';
 import { SharedModule } from './shared/shared.module';
 import { SpeakersModule } from './speakers/speakers.module';
+import { TicketsComponent } from './tickets/tickets.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TicketsComponent],
   imports: [
     BrowserModule,
     SharedModule,
