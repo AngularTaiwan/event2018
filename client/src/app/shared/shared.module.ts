@@ -13,6 +13,7 @@ import { AnchorClickDirective } from './anchor-click.directive';
 import { CountdownComponent } from './countdown/countdown.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const materialModule = [
   MatButtonModule,
@@ -23,7 +24,7 @@ const materialModule = [
 ];
 
 @NgModule({
-  imports: [CommonModule, AgmCoreModule, materialModule],
+  imports: [CommonModule, AgmCoreModule, materialModule, HttpClientModule ],
   declarations: [
     CountdownComponent,
     HeaderComponent,
