@@ -8,14 +8,12 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./tickets.component.scss']
 })
 export class TicketsComponent implements OnInit {
-
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
-        'help',
-        sanitizer.bypassSecurityTrustResourceUrl('assets/images/help.svg'));
+      'help',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/images/help.svg')
+    );
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
