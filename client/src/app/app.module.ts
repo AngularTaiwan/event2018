@@ -16,9 +16,11 @@ import { ScheduleModule } from './schedule/schedule.module';
 import { SharedModule } from './shared/shared.module';
 import { SpeakersModule } from './speakers/speakers.module';
 import { TicketsComponent } from './tickets/tickets.component';
+import { TicketComponent } from './tickets/ticket/ticket.component';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
-  declarations: [AppComponent, TicketsComponent],
+  declarations: [AppComponent, TicketsComponent, TicketComponent, IntroComponent],
   imports: [
     BrowserModule,
     SharedModule,
