@@ -1,0 +1,100 @@
+@mixin base-rebon {
+  top: 0;
+  left: 0.5%;
+  width: 13%;
+  height: 70%;
+  position: absolute;
+  background: #3f51b5;
+}
+
+.ticket-base {
+  position: relative;
+}
+.ribbon-upper {
+  @include base-rebon();
+  z-index: 4;
+  clip-path: polygon(59% 40%, 59% 77%, 0 100%, 0 63%);
+  -webkit-clip-path: polygon(59% 40%, 59% 77%, 0 100%, 0 63%);
+  background-image: linear-gradient(
+    68deg,
+    rgba(0, 0, 0, 0.15) 20%,
+    rgba(0, 0, 0, 0.17) 99%
+  );
+}
+.ribbon-body {
+  z-index: 11;
+  @include base-rebon();
+  clip-path: polygon(63% 0, 100% 0, 0 100%, 0 63%);
+  .ribbon-text {
+    color: white;
+    transform: rotate(-48deg);
+    line-height: 340%;
+    font-size: 12px;
+    display: block;
+  }
+}
+.ribbon-lower {
+  z-index: 4;
+  @include base-rebon();
+  clip-path: polygon(63% 0, 100% 0, 87% 53%, 50% 53%);
+  background-image: linear-gradient(
+    -191deg,
+    rgba(0, 0, 0, 0.14) 4%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+.ticket {
+  z-index: 5;
+  position: relative;
+  top: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-image: url('/assets/images/ticketContainer.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  .ticket-wrapper {
+    z-index: 10;
+    padding: 15px;
+
+    .left-block {
+      min-height: 60px;
+      padding-left: 40px;
+    }
+    .timestamp {
+      margin: 0;
+      min-height: 20px;
+      font-family: 'Noto Sans TC';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      color: rgba(1, 22, 39, 0.6);
+      letter-spacing: 0.25px;
+      line-height: 20px;
+    }
+
+    .event {
+      font-family: 'Noto Sans TC';
+      font-size: 20px;
+      color: rgba(1, 22, 39, 0.87);
+      letter-spacing: 0.4px;
+      line-height: 28px;
+    }
+
+    .help {
+      width: 20px;
+      height: 22px;
+      opacity: 0.2;
+    }
+
+    .price {
+      font-family: Sansation-Regular;
+      font-size: 24px;
+      color: #3f51b5;
+      letter-spacing: 0.4px;
+      text-align: center;
+      line-height: 28px;
+    }
+  }
+}
