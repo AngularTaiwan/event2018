@@ -1,21 +1,23 @@
 <div class="ticket-base">
+  <ng-container *ngIf="ticket.ribbonText">
     <div class="ribbon-upper"></div>
     <div class="ribbon-body">
-      <span class="ribbon-text">yooooo</span>
+      <span class="ribbon-text">{{ticket.ribbonText}}</span>
     </div>
     <div class="ribbon-lower"></div>
-    <div class="ticket d-flex">
-      <div class="ticket-wrapper" style="width: 65.5%">
-        <div class="left-block">
-          <div class="timestamp">{{sectionTime}}</div>
-          <div class="event d-flex align-items-center">
-            <div>{{sectionName}}</div>
-            <mat-icon svgIcon="help" class="ml-2 help" color="primary"></mat-icon>
-          </div>
+  </ng-container>
+  <div class="ticket d-flex">
+    <div class="ticket-wrapper" style="width: 65.5%">
+      <div class="left-block">
+        <div class="timestamp">{{ticket.desc}}</div>
+        <div class="event d-flex align-items-center">
+          <div>{{ticket.title}}</div>
+          <mat-icon svgIcon="help" class="ml-2 help" color="primary"></mat-icon>
         </div>
       </div>
-      <div class="ticket-wrapper d-flex justify-content-center align-items-center" style="width: 34.5%">
-        <div class="price text-center"> ${{sectionPrice | number: '1.0-0'}}</div>
-      </div>
+    </div>
+    <div class="ticket-wrapper d-flex justify-content-center align-items-center" style="width: 34.5%">
+      <div class="price text-center"> {{ticket.price | currency:'':'symbol':'1.0-0'}}</div>
     </div>
   </div>
+</div>
