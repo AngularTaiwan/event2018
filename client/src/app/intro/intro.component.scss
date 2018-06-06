@@ -1,0 +1,47 @@
+@import 'node_modules/@angular/material/theming';
+.intro {
+  background-color: map-get($mat-indigo, 700);
+  color: white;
+  height: 500px;
+  position: relative;
+
+  .shadow-101 {
+    background: rgba(0, 0, 0, 0.1);
+    width: 21vw;
+    height: 438px;
+    -webkit-clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    bottom: 0;
+  }
+  .building-101 {
+    position: absolute;
+    left: 21vw;
+    bottom: 0;
+    z-index: 2;
+    margin-left: -92px;
+    margin-bottom: -113px;
+  }
+
+  header {
+    z-index: 3;
+    .desc {
+      font-family: 'Sansation-Light';
+      font-size: 24px;
+      letter-spacing: 0.18px;
+    }
+    .title {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+
+      h1 {
+        font-family: 'Sansation-Regular';
+        font-size: 48px;
+        font-weight: normal;
+        letter-spacing: -0.4px;
+        margin: 0;
+      }
+    }
+  }
+}
