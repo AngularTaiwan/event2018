@@ -1,6 +1,6 @@
 export interface Ticket {
-  timestamp: string;
   title: string;
-  hasRibbon: boolean;
-  price: string;
+  desc?: string;
+  ribbonText?: string;
+  price: number;
 }
