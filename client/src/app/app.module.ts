@@ -18,9 +18,9 @@ import { SpeakersModule } from './speakers/speakers.module';
 import { TicketsComponent } from './tickets/tickets.component';
 import { TicketComponent } from './tickets/ticket/ticket.component';
 import { IntroComponent } from './intro/intro.component';
-
+import { LocationComponent } from './location/location.component';
 @NgModule({
-  declarations: [AppComponent, TicketsComponent, TicketComponent, IntroComponent],
+  declarations: [AppComponent, TicketsComponent, TicketComponent, IntroComponent, LocationComponent],
   imports: [
     BrowserModule,
     SharedModule,
