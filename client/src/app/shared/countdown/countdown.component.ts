@@ -11,7 +11,6 @@ export class CountdownComponent implements OnInit, OnDestroy {
   _endDate: moment.Moment;
   @Input() endDate;
 
-
   destroy$ = new Subject();
   countDown$: Observable<{
     dnn: string;
@@ -23,10 +22,10 @@ export class CountdownComponent implements OnInit, OnDestroy {
   constructor() {}
 
   ngOnInit() {
-    this._endDate = moment(this.endDate);
+    this._endDate = moment.utc(this.endDate);
     this.countDown$ = timer(0, 1000).pipe(
       takeUntil(this.destroy$),
-      map(t => this._endDate.diff(moment(), 'seconds')),
+      map(t => this._endDate.diff(moment.utc(), 'seconds')),
       takeWhile(rs => rs >= 0),
       map(remainSec => {
         const result = {
