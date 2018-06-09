@@ -1,0 +1,18 @@
+.footer {
+  padding: 20px;
+  background-color: #303f9f;
+  color: white;
+  position: relative;
+  font-family: 'Noto Sans TC';
+  font-size: 16px;
+  z-index: 2;
+  .socials-nav {
+    list-style: none;
+    .socials-nav-item {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
+}
