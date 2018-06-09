@@ -1,10 +1,31 @@
 @import 'node_modules/@angular/material/theming';
+@mixin flip-101 {
+  transform: rotateY(180deg);
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
 .intro {
-  background-color: map-get($mat-indigo, 700);
   color: white;
   height: 500px;
   position: relative;
-
+  &:before {
+    content: '';
+    background: map-get($mat-indigo, 700) url('/assets/images/bg.svg') repeat;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    animation-name: sprint;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .build-101 {
+    @media screen and (max-width: 990px) {
+      @include flip-101();
+    }
+  }
   .shadow-101 {
     background: rgba(0, 0, 0, 0.1);
     width: 21vw;
@@ -21,27 +42,55 @@
     z-index: 2;
     margin-left: -92px;
     margin-bottom: -113px;
+    @media screen and (max-width: 990px) {
+      margin-left: -126px;
+      transform: rotateY(180deg);
+    }
   }
 
   header {
     z-index: 3;
     .desc {
-      font-family: 'Sansation-Light';
+      font-family: 'Sansation-Light', 'Noto Sans TC';
       font-size: 24px;
+      font-weight: lighter;
       letter-spacing: 0.18px;
+      margin-bottom: 0;
     }
     .title {
       margin-top: 10px;
       display: flex;
       flex-wrap: wrap;
-
       h1 {
         font-family: 'Sansation-Regular';
-        font-size: 48px;
+        font-size: 60px;
         font-weight: normal;
         letter-spacing: -0.4px;
         margin: 0;
+        width: 100%;
       }
     }
+  }
+}
+
+.logo {
+  width: 100%;
+  // @media screen and (max-width: 1199px) {
+  //   width: 90%;
+  // }
+  @media screen and (max-width: 767px) {
+    width: 30%;
+  }
+}
+
+@keyframes sprint {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -100% 0;
+  }
+  0% {
+    background-position: 0 0;
   }
 }

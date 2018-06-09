@@ -1,5 +1,5 @@
 .card {
-  margin-top:36px;
+  margin-top: 36px;
   padding: 8px 12px;
 
   mat-card-header {
@@ -8,9 +8,9 @@
     letter-spacing: 0.25px;
     line-height: 20px;
 
-    .first {
-      color: rgba(1, 22, 39, 1);
-    }
+    // .first {
+    //   color: rgba(1, 22, 39, 1);
+    // }
   }
 
   .timer {

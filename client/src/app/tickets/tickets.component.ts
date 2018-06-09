@@ -22,7 +22,7 @@ export class TicketsComponent implements OnInit {
     this.exportTickets = [
       {
         title: '早鳥票',
-        ribbonText: '限量',
+        ribbonText: '限量發售',
         price: 2000
       },
       {
@@ -39,18 +39,18 @@ export class TicketsComponent implements OnInit {
     this.workshopTickets = [
       {
         title: '入門工作坊',
-        desc: '09:00-1530',
-        price: 1500
+        desc: '08:00-17:00',
+        price: 2000
       },
       {
         title: '進階工作坊',
-        desc: '09:00-11:30',
-        price: 2500
+        desc: '08:00-12:00',
+        price: 3000
       },
       {
         title: '進階工作坊',
-        desc: '12:30-1500(午場)',
-        price: 2500
+        desc: '13:00-17:00',
+        price: 3000
       }
     ];
   }
