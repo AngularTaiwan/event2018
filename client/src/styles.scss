@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+// Boostrap
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+@import 'node_modules/bootstrap/scss/grid';
+@import 'node_modules/bootstrap/scss/utilities';
+
+//Material
+@import 'node_modules/@angular/material/theming';
+// Plus imports for other components in your app.
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+@font-face {
+  font-family: 'Sansation-Light';
+  src: url(/assets/fonts/sansation/Sansation_Light.ttf);
+}
+@font-face {
+  font-family: 'Sansation-Regular';
+  src: url(/assets/fonts/sansation/Sansation_Regular.ttf);
+}
+@font-face {
+  font-family: 'Sansation-Bold';
+  src: url(/assets/fonts/sansation/Sansation_Bold.ttf);
+}
+
+$default-font-familys: 'Noto Sans TC', 'Helvetica Neue', sans-serif;
+$ngtw-typography: mat-typography-config(
+  quote(join('Sansation-Regular', $default-font-familys))
+);
+
+@include mat-core($ngtw-typography);
+
+$ngtw-primary: mat-palette($mat-indigo, 700);
+$ngtw-accent: mat-palette($mat-pink, A200, A100, A400);
+$ngtw-warn: mat-palette($mat-red);
+
+$ngtw-theme: mat-light-theme($ngtw-primary, $ngtw-accent, $ngtw-warn);
+
+@include angular-material-theme($ngtw-theme);
+
+.topic {
+  font-family: Sansation-Regular;
+  font-size: 48px;
+  color: rgba(0, 0, 0, 0.87);
+  letter-spacing: -0.4px;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 64px;
+}

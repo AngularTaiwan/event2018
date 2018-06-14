@@ -1,0 +1,30 @@
+@import 'node_modules/@angular/material/theming';
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  color: white;
+}
+.buy-ticket {
+  background-color: map-get($mat-indigo, 500);
+  color: white;
+  letter-spacing: 1.25px;
+
+  @media (min-width: 576px) {
+    width: 160px;
+   }
+
+
+}
+.float {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: map-get($mat-indigo, 500);
+  color: white;
+  z-index: 98;
+
+}

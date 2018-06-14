@@ -5,12 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Properties\PublishProfiles\angulartaiwan2018 - FTP.pubxml" />
-    <None Remove="Properties\PublishProfiles\angulartaiwan2018 - Web Deploy.pubxml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

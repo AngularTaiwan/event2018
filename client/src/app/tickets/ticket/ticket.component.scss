@@ -1,0 +1,145 @@
+@mixin base-rebon {
+  top: 0;
+  left: 0.5%;
+  width: 16%;
+  height: 85%;
+  position: absolute;
+  background: #3f51b5;
+}
+
+@mixin mid-rebon {
+  width: 19%;
+  height: 75%;
+}
+
+@mixin sm-rebon {
+  width: 15%;
+  height: 78%;
+}
+
+@mixin xs-rebon {
+  width: 18%;
+  height: 85%;
+}
+
+@mixin fix-rebon {
+  width: 75px;
+  height: 75px;
+}
+
+.ticket-base {
+  position: relative;
+}
+
+.ribbon-upper,
+.ribbon-body,
+.ribbon-lower {
+  @include base-rebon();
+  @media screen and (max-width: 1200px) {
+    @include mid-rebon();
+  }
+  @media screen and (max-width: 990px) {
+    @include sm-rebon();
+  }
+  @media screen and (max-width: 768px) {
+    @include xs-rebon();
+  }
+  @media screen and (max-width: 599px) {
+    @include fix-rebon();
+  }
+}
+
+.ribbon-upper {
+  z-index: 4;
+  clip-path: polygon(59% 40%, 59% 77%, 0 100%, 0 63%);
+  -webkit-clip-path: polygon(59% 40%, 59% 77%, 0 100%, 0 63%);
+  background-image: linear-gradient(
+    68deg,
+    rgba(0, 0, 0, 0.15) 20%,
+    rgba(0, 0, 0, 0.17) 99%
+  );
+}
+.ribbon-body {
+  z-index: 11;
+  clip-path: polygon(63% 0, 100% 0, 0 100%, 0 63%);
+  .ribbon-text {
+    font-family: 'Noto Sans TC';
+    color: white;
+    transform: rotate(-48deg);
+    line-height: 340%;
+    font-size: 14px;
+    display: block;
+    @media screen and (max-width: 1200px) {
+      line-height: 300%;
+      transform: rotate(-45deg);
+    }
+    @media screen and (max-width: 768px) {
+      line-height: 330%;
+      transform: rotate(-46deg);
+    }
+  }
+}
+.ribbon-lower {
+  z-index: 4;
+  clip-path: polygon(63% 0, 100% 0, 87% 53%, 50% 53%);
+  background-image: linear-gradient(
+    -191deg,
+    rgba(0, 0, 0, 0.14) 4%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+.ticket {
+  z-index: 5;
+  position: relative;
+  top: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-image: url('/assets/images/ticketContainer.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  .ticket-wrapper {
+    z-index: 10;
+    padding: 15px;
+
+    .left-block {
+      min-height: 60px;
+      padding-left: 40px;
+    }
+    .timestamp {
+      margin: 0;
+      min-height: 20px;
+      font-family: 'Noto Sans TC';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      color: rgba(1, 22, 39, 0.6);
+      letter-spacing: 0.25px;
+      line-height: 20px;
+    }
+
+    .event {
+      font-family: 'Noto Sans TC';
+      font-size: 20px;
+      color: rgba(1, 22, 39, 0.87);
+      letter-spacing: 0.4px;
+      line-height: 28px;
+    }
+
+    .help {
+      width: 20px;
+      height: 22px;
+      opacity: 0.2;
+    }
+
+    .price {
+      font-family: Sansation-Regular;
+      font-size: 24px;
+      color: #3f51b5;
+      letter-spacing: 0.4px;
+      text-align: center;
+      line-height: 28px;
+    }
+  }
+}

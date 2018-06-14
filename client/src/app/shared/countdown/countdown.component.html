@@ -1,49 +1,28 @@
-<div class="row counters-wrapper countdown">
-  <div class="col-sm-3">
-    <div class="counter-block counter-block-no-border counter-block-white has-separator">
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count">{{ (countDown$ | async)?.dnn}}</span>
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      距離台灣第一個 NG-Conf 還有
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="row no-gutters timer">
+      <div class="col text-center">
+        <h1 class="mat-h1">{{ (countDown$ | async)?.dnn}}</h1>
+        <p class="duration">days</p>
+      </div>
+      <div class="col text-center">
+        <h1 class="mat-h1">{{ (countDown$ | async)?.hnn}}</h1>
+        <p class="duration">hours</p>
+      </div>
+      <div class="col text-center">
+        <h1 class="mat-h1">{{ (countDown$ | async)?.mnn}}</h1>
+        <p class="duration">minutes</p>
 
-          <p class="title">days</p>
-        </div>
+      </div>
+      <div class="col text-center">
+        <h1 class="mat-h1">{{ (countDown$ | async)?.snn}}</h1>
+        <p class="duration">seconds</p>
       </div>
     </div>
-  </div>
-
-  <div class="col-sm-3">
-    <div class="counter-block counter-block-no-border counter-block-white has-separator">
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count">{{ (countDown$ | async)?.hnn }}</span>
-
-          <p class="title">hours</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-3">
-    <div class="counter-block counter-block-no-border counter-block-white has-separator">
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count">{{ (countDown$ | async)?.mnn }}</span>
-
-          <p class="title">minutes</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-3">
-    <div class="counter-block counter-block-no-border counter-block-white">
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count">{{ (countDown$ | async)?.snn }}</span>
-
-          <p class="title">seconds</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  </mat-card-content>
+</mat-card>

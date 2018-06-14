@@ -1,0 +1,152 @@
+// Flat Shadow Css @Ben 這邊可以移到外面～嗎
+@mixin flatShadow($type, $color, $length, $fadeout: true, $skew: false, $direction: right){
+  $shadow: '';
+  @if $skew == false or $type == text{
+    @if $direction == right {
+      @for $i from 0 to $length - 1 {
+        $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $color + ',';
+      }
+    }
+    @if $direction == left {
+      @for $i from 0 to $length - 1 {
+        $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $color + ',';
+      }
+    }
+  }
+
+   @if $fadeout == true{
+    @for $i from 1 to $length - 1 {
+      @if $type == text or $skew == false{
+        @if $direction == right{
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + rgba($color, 1 - $i / $length) + ',';
+        }
+        @if $direction == left{
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + rgba($color, 1 - $i / $length) + ',';
+        }
+      }
+      @if ($type == box) and $skew == true{
+        @if $direction == right {
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
+        }
+        @if $direction == left {
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
+        }
+      }
+    }
+    $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba($color, 0);
+  }
+ @if $fadeout == false{
+   @if $skew == true and ( $type == box ){
+     @for $i from 0 to $length - 1 {
+            $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .1 + 'px ' + $color + ',';
+      }
+   }
+    $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba(0,0,0,0);
+ }
+ $shadow: unquote($shadow);
+  @if $type == 'box' {box-shadow: $shadow;}
+  @if $type == 'text' {text-shadow: $shadow;}
+}
+
+#location {
+  padding-top: 80px;
+  padding-bottom: 64px;
+  background: #f6f9fc;
+}
+
+#location .container{
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 960px;
+  }
+}
+
+.map{
+  width: 92%;
+  margin-right: 4%;
+  margin-left: 4%;
+  padding: 0;
+  height: 240px;
+  margin-bottom: 32px;
+  @media only screen and (min-width: 768px) {
+    height: auto;
+    width: 48%;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 0;
+
+  }
+}
+
+.info{
+  width: 92%;
+  margin-right: 4%;
+  margin-left: 4%;
+  @media only screen and (min-width: 768px) {
+    width: 48%;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  .info_card{
+    position: relative;
+    padding: 32px 16px 16px 32px;
+    background: #FFFFFF;
+    border: 2px solid #EDF2F5;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    @include flatShadow(box, #EDF2F5, 600, false, true, right); //flat shadow
+    .info_card_shadow{
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+    }
+    .info_card_content{
+      .info_card_content_item{
+        flex: 1;
+      }
+      h5{
+        font-family: NotoSansCJKtc-DemiLight;
+        font-size: 24px;
+        font-weight: 500;
+        color: rgba(1,22,39,0.87);
+        letter-spacing: 0.4px;
+        line-height: 28px;
+        margin: 0;
+      }
+      p{
+        font-family: NotoSansCJKtc-Light;
+        font-size: 14px;
+        color: rgba(1,22,39,0.60);
+        letter-spacing: 0.25px;
+        line-height: 20px;
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+    }
+    .info_card_action{
+      display: flex;
+      align-items: flex-end;
+      flex: 1;
+      height: 52px;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+      a,button{
+        font-family: PingFangTC-Regular;
+        font-size: 16px;
+        color: #3F51B5;
+        letter-spacing: 0.2px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.info_address_content,
+.info_way_content{
+  flex: 1;
+}

@@ -1,44 +1,45 @@
 import { Component, OnInit, OnChanges, OnDestroy, Input } from '@angular/core';
 import * as moment from 'moment/moment';
-import { Subject } from 'rxjs/Subject';
-import { Observable } from 'rxjs/Observable';
-import { combineLatest } from 'rxjs/observable/combineLatest';
-import { timer } from 'rxjs/observable/timer';
-import { takeUntil, map, shareReplay } from 'rxjs/operators';
+import { Subject, Observable, combineLatest, timer } from 'rxjs';
+import { takeUntil, map, shareReplay, takeWhile } from 'rxjs/operators';
 @Component({
   selector: 'app-countdown',
   templateUrl: './countdown.component.html',
-  styleUrls: ['./countdown.component.css']
+  styleUrls: ['./countdown.component.scss']
 })
-export class CountdownComponent implements OnInit, OnChanges, OnDestroy {
+export class CountdownComponent implements OnInit, OnDestroy {
+  _endDate: moment.Moment;
   @Input() endDate;
 
-  _endDate;
-
   destroy$ = new Subject();
-  countDown$: Observable<{ dnn: string; hnn: string; mnn: string; snn: string }>;
+  countDown$: Observable<{
+    dnn: string;
+    hnn: string;
+    mnn: string;
+    snn: string;
+  }>;
+
   constructor() {}
 
-  ngOnChanges() {
-    this._endDate = moment(this.endDate);
-  }
   ngOnInit() {
+    this._endDate = moment.utc(this.endDate);
     this.countDown$ = timer(0, 1000).pipe(
       takeUntil(this.destroy$),
-      map(() => {
-        let totalSeconds = this._endDate.diff(moment(), 'seconds');
+      map(t => this._endDate.diff(moment.utc(), 'seconds')),
+      takeWhile(rs => rs >= 0),
+      map(remainSec => {
         const result = {
-          dnn: Math.floor(totalSeconds / 86400),
+          dnn: Math.floor(remainSec / 86400),
           hnn: 0,
           mnn: 0,
           snn: 0
         };
-        totalSeconds -= result.dnn * 86400;
-        result.hnn = Math.floor(totalSeconds / 3600);
-        totalSeconds -= result.hnn * 3600;
-        result.mnn = Math.floor(totalSeconds / 60);
-        totalSeconds -= result.mnn * 60;
-        result.snn = totalSeconds;
+        remainSec -= result.dnn * 86400;
+        result.hnn = Math.floor(remainSec / 3600);
+        remainSec -= result.hnn * 3600;
+        result.mnn = Math.floor(remainSec / 60);
+        remainSec -= result.mnn * 60;
+        result.snn = remainSec;
         return {
           ...result,
           dnn: result.dnn.toString().padStart(3, '0'),

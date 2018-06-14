@@ -1,0 +1,205 @@
+@import 'node_modules/@angular/material/theming';
+@mixin flip-101 {
+  transform: rotateY(180deg);
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.intro {
+  color: white;
+  height: 90vh;
+  max-height: 800px;
+  position: relative;
+  overflow: hidden;
+  &:before { //背景城市
+    content: '';
+    background: map-get($mat-indigo, 700) url('/assets/images/bg.svg');
+    background-repeat: repeat-x;
+    background-position: 0;
+    background-size: auto 90vh;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: -100;
+    animation-name: sprint;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .build-101 {
+    @media screen and (max-width: 990px) {
+      @include flip-101();
+    }
+  }
+  .shadow-101 {
+    background: rgba(0, 0, 0, 0.1);
+    width: 21vw;
+    height: 438px;
+    -webkit-clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    bottom: 0;
+  }
+  .building-101 {
+    position: absolute;
+    left: 21vw;
+    bottom: 0;
+    z-index: 2;
+    margin-left: -92px;
+    margin-bottom: -113px;
+    @media screen and (max-width: 990px) {
+      margin-left: -126px;
+      transform: rotateY(180deg);
+    }
+  }
+
+  .desc {
+    color: rgba(255,255,255, .8);
+    font-family: 'Sansation-Light', 'Noto Sans TC';
+    font-size: 24px;
+    font-weight: lighter;
+    letter-spacing: 0.18px;
+    margin-bottom: 0;
+    display: flex;
+    text-shadow: 0 6px 12px rgba(0,0,0,.25);
+    :after{
+      content: '';
+      display: flex;
+      align-self: flex-end;
+      height: 3px;
+      width: 0%;
+      background-color: rgba(255,255,255, .8);
+      animation: inTaiwan;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
+    @media screen and (max-width: 992px){
+      font-size: 20px;
+    }
+    @media screen and (max-width: 768px){
+      font-size: 16px;
+    }
+    @media screen and (max-width: 576px){
+      font-size: 14px;
+    }
+  }
+  .title {
+    margin-top: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    h1 {
+      font-family: 'Sansation-Regular';
+      font-size: 60px;
+      font-weight: normal;
+      letter-spacing: -0.4px;
+      margin: 0;
+      width: 100%;
+      text-shadow: 0 10px 20px rgba(0,0,0,.25);
+      @media screen and (max-width: 768px){
+        font-size: 48px;
+      }
+      @media screen and (max-width: 576px){
+        font-size: 40px;
+      }
+    }
+  }
+  .codeLeft {
+    width: 8%;
+    height: 100%;
+    .codeLeft_img{
+      width: 100%;
+      height: 100%;
+    }
+    @media screen and (max-width: 767px) {
+      width: 12%;
+    }
+    @media screen and (max-width: 576px){
+      width: 9%;
+    }
+  }
+  .codeRight {
+    width: 13%;
+    height: 100%;
+    .codeRight_img{
+      width: 100%;
+      height: 100%;
+    }
+    @media screen and (max-width: 767px) {
+      width: 19.5%;
+    }
+    @media screen and (max-width: 576px){
+      width: 14.5%;
+    }
+  }
+
+  .detail{
+    font-family: 'Sansation-Light', 'Noto Sans TC';
+    font-size: 24px;
+    font-weight: 300;
+    color: rgba(255,255,255, .8);
+    opacity: 0;
+    animation: fadein;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    letter-spacing: 0.18px;
+    @media screen and (max-width: 992px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 576px){
+      font-size: 14px;
+    }
+    .detail_time{
+      padding: 8px 24px;
+      line-height: 1.4em;
+      @media screen and (max-width: 400px){
+        padding: 8px 12px;
+      }
+    }
+    .detail_location{
+      padding: 8px 24px;
+      @media screen and (max-width: 400px){
+        padding: 8px 12px;
+      }
+    }
+    .detail_divider{
+      display: flex;
+      width: 4px;
+      height: 50%;
+      background-color: rgba(256, 256, 256, .9);
+      border-radius: 2px;
+    }
+  }
+}
+
+app-countdown{
+  opacity: 0;
+  animation: fadein;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sprint {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: calc(100vw - 30px) 0;
+  }
+}
+
+@keyframes inTaiwan {
+  from {width: 0%;}
+  to {width: 100%;}
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

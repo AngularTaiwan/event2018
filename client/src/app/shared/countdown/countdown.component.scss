@@ -1,0 +1,29 @@
+.card {
+  margin-top: 36px;
+  padding: 8px 12px;
+  background-color: rgba(256, 256, 256, .92);
+
+  mat-card-header {
+    font-size: 16px;
+    color: rgba(1, 22, 39, 0.6);
+    letter-spacing: 0.25px;
+    line-height: 20px;
+
+    // .first {
+    //   color: rgba(1, 22, 39, 1);
+    // }
+  }
+
+  .timer {
+    font-size: 24px;
+    color: rgba(1, 22, 39, 0.87);
+    .duration {
+      margin: 10px 0px;
+      opacity: 0.6;
+      font-size: 14px;
+      color: rgba(1, 22, 39, 0.6);
+      letter-spacing: 0.4px;
+      line-height: 16px;
+    }
+  }
+}
