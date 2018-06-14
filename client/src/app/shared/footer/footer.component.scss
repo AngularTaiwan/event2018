@@ -1,7 +1,8 @@
 .footer {
   padding: 20px;
   background-color: #303f9f;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.18px;
   position: relative;
   font-family: 'Noto Sans TC';
   font-size: 16px;
@@ -14,5 +15,8 @@
       text-decoration: none;
       font-size: 20px;
     }
+  }
+  .text-alt{
+    font-weight: 300;
   }
 }
