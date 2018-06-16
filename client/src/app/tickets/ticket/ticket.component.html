@@ -7,16 +7,16 @@
     <div class="ribbon-lower"></div>
   </ng-container>
   <div class="ticket d-flex">
-    <div class="ticket-wrapper" style="width: 65.5%">
-      <div class="left-block">
-        <div class="timestamp">{{ticket.desc}}</div>
+    <div class="ticket-wrapper ticket-left">
+      <div class="left-block d-flex flex-column justify-content-center">
+        <div  *ngIf="ticket.desc !== undefined" class="timestamp">{{ticket.desc}}</div>
         <div class="event d-flex align-items-center">
           <div>{{ticket.title}}</div>
-          <mat-icon svgIcon="help" class="ml-2 help" color="primary"></mat-icon>
+          <mat-icon svgIcon="help" class="ml-2 help d-none d-sm-inline-block" color="primary"></mat-icon>
         </div>
       </div>
     </div>
-    <div class="ticket-wrapper d-flex justify-content-center align-items-center" style="width: 34.5%">
+    <div class="ticket-wrapper ticket-right d-flex justify-content-center align-items-center">
       <div class="price text-center"> {{ticket.price | currency:'':'symbol':'1.0-0'}}</div>
     </div>
   </div>

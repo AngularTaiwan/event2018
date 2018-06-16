@@ -1,7 +1,7 @@
 @mixin base-rebon {
   top: 0;
   left: 0.5%;
-  width: 16%;
+  width: 18%;
   height: 85%;
   position: absolute;
   background: #3f51b5;
@@ -13,7 +13,7 @@
 }
 
 @mixin sm-rebon {
-  width: 15%;
+  width: 22%;
   height: 78%;
 }
 
@@ -65,17 +65,21 @@
   .ribbon-text {
     font-family: 'Noto Sans TC';
     color: white;
-    transform: rotate(-48deg);
-    line-height: 340%;
-    font-size: 14px;
+    transform: rotate(-49deg);
+    line-height: 344%;
+    font-size: 13px;
     display: block;
     @media screen and (max-width: 1200px) {
       line-height: 300%;
       transform: rotate(-45deg);
     }
+    @media screen and (max-width: 990px) {
+      line-height: 300%;
+      transform: rotate(-50deg);
+    }
     @media screen and (max-width: 768px) {
-      line-height: 330%;
-      transform: rotate(-46deg);
+      line-height: 350%;
+      transform: rotate(-48deg);
     }
   }
 }
@@ -99,13 +103,30 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
+  .ticket-left {
+    width: 65.5%;
+    @media screen and (max-width: 576px){
+      width: 62%;
+    }
+  }
+  .ticket-right {
+    width: 34.5%;
+    @media screen and (max-width: 576px){
+      width: 38%;
+    }
+  }
   .ticket-wrapper {
     z-index: 10;
     padding: 15px;
-
     .left-block {
       min-height: 60px;
       padding-left: 40px;
+      @media screen and (max-width: 576px){
+        padding-left: 32px;
+      }
+      @media screen and (max-width: 400px){
+        padding-left: 24px;
+      }
     }
     .timestamp {
       margin: 0;
@@ -117,6 +138,12 @@
       color: rgba(1, 22, 39, 0.6);
       letter-spacing: 0.25px;
       line-height: 20px;
+      @media screen and (max-width: 992px) {
+        font-size: 12px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
     }
 
     .event {
@@ -125,6 +152,12 @@
       color: rgba(1, 22, 39, 0.87);
       letter-spacing: 0.4px;
       line-height: 28px;
+      @media screen and (max-width: 992px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
     }
 
     .help {
@@ -140,6 +173,13 @@
       letter-spacing: 0.4px;
       text-align: center;
       line-height: 28px;
+      margin-left: -8px;
+      @media screen and (max-width: 992px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
     }
   }
 }

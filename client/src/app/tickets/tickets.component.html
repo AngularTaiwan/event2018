@@ -1,19 +1,18 @@
 <section id="tickets" class="tickets">
   <h1 class="topic text-center">Tickets</h1>
   <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-md-10 col-lg-6">
+    <div class="row justify-content-cneter">
+      <div class="col-12 col-sm-10 col-md-6">
         <div class="tickets-container">
-          <h2 class="title text-center">專家演講</h2>
+          <h5 class="title text-center">專家演講</h5>
           <p class="date text-center">11/16 星期五</p>
           <app-ticket *ngFor="let t of exportTickets" [ticket]="t"></app-ticket>
         </div>
       </div>
 
-      <div class="col-md-10 col-lg-6">
-
+      <div class="col-12 col-sm-10 col-md-6">
         <div class="tickets-container">
-          <h2 class="title text-center">工作坊</h2>
+          <h5 class="title text-center">工作坊</h5>
           <p class="date text-center">11/17 星期六</p>
           <app-ticket *ngFor="let t of workshopTickets" [ticket]="t"></app-ticket>
         </div>

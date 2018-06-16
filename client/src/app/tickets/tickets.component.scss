@@ -1,3 +1,8 @@
+#tickets .container{
+  @media only screen and (min-width: 992px) {
+    width: 960px;
+  }
+}
 .tickets {
   background: #f6f9fc;
   border: 1px solid #edf2f5;
@@ -8,18 +13,28 @@
     background: #ffffff;
     border: 2px solid #edf2f5;
     border-radius: 12px;
+    @media screen and (max-width: 992px){
+      margin-bottom: 32px;
+      padding: 24px;
+    }
+    @media screen and (max-width: 576px){
+      padding: 16px;
+    }
     .title {
       font-family: 'Noto Sans TC';
       font-size: 24px;
+      font-weight: 400;
       color: rgba(1, 22, 39, 0.87);
       letter-spacing: 0.4px;
       line-height: 28px;
+      margin: 0;
     }
     .date {
       font-family: 'Sansation-Regular', 'Noto Sans TC';
       font-size: 20px;
       color: rgba(1, 22, 39, 0.6);
       letter-spacing: 0.25px;
+      margin: 8px 0 32px 0;
     }
   }
 }
