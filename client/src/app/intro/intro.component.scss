@@ -9,21 +9,28 @@
   color: white;
   height: 90vh;
   max-height: 800px;
+  max-width: 100%;
   position: relative;
   overflow: hidden;
-  &:before { //背景城市
-    content: '';
+  @media screen and (max-width: 768px) {
+    max-height: 500px;
+  }
+  .bk-img {
+    //背景城市
     background: map-get($mat-indigo, 700) url('/assets/images/bg.svg');
     background-repeat: repeat-x;
-    background-position: 0;
-    background-size: auto 90vh;
-    width: 100%;
+    background-position: 0 center;
+    background-size: auto 795px;
+    width: 300%;
     height: 100%;
     display: block;
-    position: fixed;
+    position: absolute;
     z-index: -100;
+    left: 0;
+    top: 0;
+    transform: translate3d(0, 0, 0);
     animation-name: sprint;
-    animation-duration: 60s;
+    animation-duration: 35s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
@@ -55,34 +62,40 @@
   }
 
   .desc {
-    color: rgba(255,255,255, .8);
+    color: rgba(255, 255, 255, 0.8);
     font-family: 'Sansation-Light', 'Noto Sans TC';
     font-size: 24px;
     font-weight: lighter;
     letter-spacing: 0.18px;
     margin-bottom: 0;
     display: flex;
-    text-shadow: 0 6px 12px rgba(0,0,0,.25);
-    :after{
+    text-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    :after {
       content: '';
       display: flex;
       align-self: flex-end;
       height: 3px;
       width: 0%;
-      background-color: rgba(255,255,255, .8);
+      background-color: rgba(255, 255, 255, 0.8);
       animation: inTaiwan;
       animation-duration: 1s;
       animation-delay: 0.5s;
       animation-fill-mode: forwards;
     }
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       font-size: 20px;
     }
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
       font-size: 16px;
     }
-    @media screen and (max-width: 576px){
+    @media screen and (max-width: 576px) {
       font-size: 14px;
+    }
+  }
+  .title-box {
+    transform: scale(1.5);
+    @media screen and (max-width: 768px) {
+      transform: scale(1.2);
     }
   }
   .title {
@@ -96,11 +109,11 @@
       letter-spacing: -0.4px;
       margin: 0;
       width: 100%;
-      text-shadow: 0 10px 20px rgba(0,0,0,.25);
-      @media screen and (max-width: 768px){
+      text-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+      @media screen and (max-width: 768px) {
         font-size: 48px;
       }
-      @media screen and (max-width: 576px){
+      @media screen and (max-width: 576px) {
         font-size: 40px;
       }
     }
@@ -108,37 +121,37 @@
   .codeLeft {
     width: 8%;
     height: 100%;
-    .codeLeft_img{
+    .codeLeft_img {
       width: 100%;
       height: 100%;
     }
     @media screen and (max-width: 767px) {
       width: 12%;
     }
-    @media screen and (max-width: 576px){
+    @media screen and (max-width: 576px) {
       width: 9%;
     }
   }
   .codeRight {
     width: 13%;
     height: 100%;
-    .codeRight_img{
+    .codeRight_img {
       width: 100%;
       height: 100%;
     }
     @media screen and (max-width: 767px) {
       width: 19.5%;
     }
-    @media screen and (max-width: 576px){
+    @media screen and (max-width: 576px) {
       width: 14.5%;
     }
   }
 
-  .detail{
+  .detail {
     font-family: 'Sansation-Light', 'Noto Sans TC';
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 300;
-    color: rgba(255,255,255, .8);
+    color: white;
     opacity: 0;
     animation: fadein;
     animation-duration: 1s;
@@ -151,55 +164,125 @@
     @media screen and (max-width: 768px) {
       font-size: 16px;
     }
-    @media screen and (max-width: 576px){
+    @media screen and (max-width: 576px) {
       font-size: 14px;
     }
-    .detail_time{
-      padding: 8px 24px;
+    .detail_time {
+      font-weight: bold;
+      padding: 4px 24px;
       line-height: 1.4em;
-      @media screen and (max-width: 400px){
+      @media screen and (max-width: 400px) {
         padding: 8px 12px;
       }
     }
-    .detail_location{
-      padding: 8px 24px;
-      @media screen and (max-width: 400px){
+    .detail_location {
+      padding: 4px 24px;
+      @media screen and (max-width: 400px) {
         padding: 8px 12px;
       }
     }
-    .detail_divider{
+    .detail_divider {
       display: flex;
       width: 4px;
       height: 50%;
-      background-color: rgba(256, 256, 256, .9);
+      background-color: rgba(256, 256, 256, 0.9);
       border-radius: 2px;
     }
   }
 }
 
-app-countdown{
+app-countdown {
   opacity: 0;
   animation: fadein;
   animation-duration: 1s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
+  font-size: 24px;
+  font-family: 'Sansation-Light', 'Noto Sans TC';
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in 3s;
+  transition: all 0.5s ease-in 3s;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #fff;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.scroll-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: '';
+  border: 2px solid white;
+  border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
 }
 
 @keyframes sprint {
-  0% {
-    background-position: 0 0;
-  }
   100% {
-    background-position: calc(100vw - 30px) 0;
+    -webkit-transform: translateX(-34.33333%);
   }
 }
 
 @keyframes inTaiwan {
-  from {width: 0%;}
-  to {width: 100%;}
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
