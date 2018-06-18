@@ -9,20 +9,23 @@
   color: white;
   height: 90vh;
   max-height: 800px;
+  max-width: 100%;
   position: relative;
   overflow: hidden;
-  &:before {
+  .bk-img {
     //背景城市
-    content: '';
     background: map-get($mat-indigo, 700) url('/assets/images/bg.svg');
     background-repeat: repeat-x;
-    background-position: left center;
+    background-position: 0 center;
     background-size: auto 90vh;
-    width: 100%;
+    width: 300%;
     height: 100%;
     display: block;
-    position: fixed;
+    position: absolute;
     z-index: -100;
+    left: 0;
+    top: 0;
+    transform: translate3d(0, 0, 0);
     animation-name: sprint;
     animation-duration: 30s;
     animation-timing-function: linear;
@@ -187,12 +190,9 @@ app-countdown {
 }
 
 @keyframes sprint {
-  0% {
-    background-position: right center;
+  100% {
+    -webkit-transform: translateX(-38.999999%);
   }
-  // 100% {
-  //   background-position: calc(100% - 30px) 0;
-  // }
 }
 
 @keyframes inTaiwan {
