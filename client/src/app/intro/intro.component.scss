@@ -20,7 +20,7 @@
     background: map-get($mat-indigo, 700) url('/assets/images/bg.svg');
     background-repeat: repeat-x;
     background-position: 0 center;
-    background-size: auto 90vh;
+    background-size: auto 795px;
     width: 300%;
     height: 100%;
     display: block;
@@ -30,7 +30,7 @@
     top: 0;
     transform: translate3d(0, 0, 0);
     animation-name: sprint;
-    animation-duration: 30s;
+    animation-duration: 35s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
@@ -265,7 +265,7 @@ app-countdown {
 
 @keyframes sprint {
   100% {
-    -webkit-transform: translateX(-38.999999%);
+    -webkit-transform: translateX(-34.33333%);
   }
 }
 
