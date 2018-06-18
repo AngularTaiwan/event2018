@@ -1,4 +1,4 @@
-<mat-card class="card">
+<!-- <mat-card class="card">
   <mat-card-header>
     <mat-card-title>
       距離台灣第一個 NG-Conf 還有
@@ -25,4 +25,24 @@
       </div>
     </div>
   </mat-card-content>
-</mat-card>
+</mat-card> -->
+
+<div class="row no-gutters timer">
+  <div class="col text-center">
+    <h1 class="mat-h1">{{ (countDown$ | async)?.dnn}}</h1>
+    <p class="duration">days</p>
+  </div>
+  <div class="col text-center">
+    <h1 class="mat-h1">{{ (countDown$ | async)?.hnn}}</h1>
+    <p class="duration">hours</p>
+  </div>
+  <div class="col text-center">
+    <h1 class="mat-h1">{{ (countDown$ | async)?.mnn}}</h1>
+    <p class="duration">minutes</p>
+
+  </div>
+  <div class="col text-center">
+    <h1 class="mat-h1">{{ (countDown$ | async)?.snn}}</h1>
+    <p class="duration">seconds</p>
+  </div>
+</div>
