@@ -17,11 +17,11 @@
   }
   .bk-img {
     //背景城市
-    background: map-get($mat-indigo, 700) url('/assets/images/bg.svg');
+    background: map-get($mat-indigo, 700) url('/assets/images/bg-amos.png');
     background-repeat: repeat-x;
     background-position: 0 center;
-    background-size: auto 795px;
-    width: 300%;
+    background-size: 100% 100%;
+    width: 200%;
     height: 100%;
     display: block;
     position: absolute;
@@ -29,10 +29,13 @@
     left: 0;
     top: 0;
     transform: translate3d(0, 0, 0);
-    animation-name: sprint;
-    animation-duration: 35s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation: sprint 210s linear infinite;
+    @media screen and (max-width: 768px) {
+      width: 300%;
+    }
+    @media screen and (max-width: 576px) {
+      width: 800%;
+    }
   }
   .build-101 {
     @media screen and (max-width: 990px) {
@@ -104,14 +107,14 @@
     flex-wrap: wrap;
     h1 {
       font-family: 'Sansation-Regular';
-      font-size: 60px;
+      font-size: 86px;
       font-weight: normal;
       letter-spacing: -0.4px;
       margin: 0;
       width: 100%;
       text-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
       @media screen and (max-width: 768px) {
-        font-size: 48px;
+        font-size: 60px;
       }
       @media screen and (max-width: 576px) {
         font-size: 40px;
@@ -149,7 +152,7 @@
 
   .detail {
     font-family: 'Sansation-Light', 'Noto Sans TC';
-    font-size: 28px;
+    font-size: 38px;
     font-weight: 300;
     color: white;
     opacity: 0;
@@ -162,23 +165,31 @@
       font-size: 20px;
     }
     @media screen and (max-width: 768px) {
-      font-size: 16px;
+      font-size: 24px;
     }
     @media screen and (max-width: 576px) {
-      font-size: 14px;
+      font-size: 24px;
     }
     .detail_time {
       font-weight: bold;
       padding: 4px 24px;
       line-height: 1.4em;
-      @media screen and (max-width: 400px) {
+      text-shadow: 0 0 30px rgba(0, 0, 51, 0.8), 0 0 20px rgba(0, 0, 51, 0.8);
+      @media screen and (max-width: 576px) {
+        width: 100%;
+        text-align: center;
         padding: 8px 12px;
+        margin-bottom: 0;
       }
     }
     .detail_location {
       padding: 4px 24px;
-      @media screen and (max-width: 400px) {
+      text-shadow: 0 0 30px rgba(0, 0, 51, 0.8), 0 0 20px rgba(0, 0, 51, 0.8);
+      @media screen and (max-width: 576px) {
+        width: 100%;
+        text-align: center;
         padding: 8px 12px;
+        margin-top: 0;
       }
     }
     .detail_divider {
@@ -187,6 +198,9 @@
       height: 50%;
       background-color: rgba(256, 256, 256, 0.9);
       border-radius: 2px;
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
     }
   }
 }
@@ -265,7 +279,7 @@ app-countdown {
 
 @keyframes sprint {
   100% {
-    -webkit-transform: translateX(-34.33333%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
