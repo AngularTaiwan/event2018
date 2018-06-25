@@ -18,11 +18,11 @@ namespace server
         public void ConfigureServices(IServiceCollection services)
         {
             // Add rendertron services
-            services.AddRendertron(options =>
-            {
-                // use http compression
-                options.AcceptCompression = true;
-            });
+            // services.AddRendertron(options =>
+            // {
+            //     // use http compression
+            //     options.AcceptCompression = true;
+            // });
             services.AddMvc();
         }
 
@@ -36,11 +36,11 @@ namespace server
 
             app.UseStaticFiles();
             // Use Rendertron middleware
-            app.UseRendertron(new RendertronMiddlewareOptions()
-            {
-                ProxyUrl = "http://rendertron:8080/render/",
-                InjectShadyDom = true
-            });
+            // app.UseRendertron(new RendertronMiddlewareOptions()
+            // {
+            //     ProxyUrl = "http://rendertron:8080/render/",
+            //     InjectShadyDom = true
+            // });
 
             app.UseMvc(routes =>
             {
