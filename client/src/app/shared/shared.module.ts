@@ -6,7 +6,8 @@ import {
   MatToolbarModule,
   MatMenuModule,
   MatIconModule,
-  MatCardModule
+  MatCardModule,
+  MatTooltipModule
 } from '@angular/material';
 
 import { AnchorClickDirective } from './anchor-click.directive';
@@ -20,11 +21,12 @@ const materialModule = [
   MatToolbarModule,
   MatMenuModule,
   MatIconModule,
-  MatCardModule
+  MatCardModule,
+  MatTooltipModule
 ];
 
 @NgModule({
-  imports: [CommonModule, AgmCoreModule, materialModule, HttpClientModule ],
+  imports: [CommonModule, AgmCoreModule, materialModule, HttpClientModule],
   declarations: [
     CountdownComponent,
     HeaderComponent,

@@ -30,9 +30,28 @@ export class TicketsComponent implements OnInit {
         price: 3000
       },
       {
-        title: '企業贊助票',
-        price: 6000,
+        title: '團體票',
+        price: 7500,
         desc: '三人套票'
+      },
+      {
+        title: '企業贊助(白金)',
+        price: 25000,
+        desc: '企業限定',
+        tooltip: `專家演講票 5 張
+        實戰工作坊 3 張
+        官網 LOGO 露出
+        企業人才媒合
+        `
+      },
+      {
+        title: '企業贊助(銀級)',
+        price: 10000,
+        desc: '企業限定',
+        tooltip: `專家演講票 2 張
+        實戰工作坊 2 張
+        官網 LOGO 露出
+        `
       }
     ];
 
