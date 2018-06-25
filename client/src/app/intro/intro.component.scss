@@ -17,11 +17,12 @@
   }
   .bk-img {
     //背景城市
-    background: map-get($mat-indigo, 700) url('/assets/images/bg-amos.png');
+    background-color: map-get($mat-indigo, 700);
+    background: map-get($mat-indigo, 700) url('/assets/images/bg-new.svg');
     background-repeat: repeat-x;
-    background-position: 0 center;
-    background-size: 100% 100%;
-    width: 200%;
+    background-position: 0px 0px;
+    background-size: auto 90vh;
+    width: 100vw;
     height: 100%;
     display: block;
     position: absolute;
@@ -30,12 +31,6 @@
     top: 0;
     transform: translate3d(0, 0, 0);
     animation: sprint 210s linear infinite;
-    @media screen and (max-width: 768px) {
-      width: 300%;
-    }
-    @media screen and (max-width: 576px) {
-      width: 800%;
-    }
   }
   .build-101 {
     @media screen and (max-width: 990px) {
@@ -282,7 +277,7 @@ app-countdown {
 
 @keyframes sprint {
   100% {
-    transform: translate3d(-50%, 0, 0);
+    background-position: -1200px center;
   }
 }
 
