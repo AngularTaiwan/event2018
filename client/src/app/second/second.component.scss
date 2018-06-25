@@ -1,0 +1,11 @@
+.second{
+    color: #3F51B5;
+    height: 50vh;
+    max-height: 560px;
+    max-width: 100%;
+    position: relative;
+    // overflow: hidden;
+    @media screen and (max-width: 768px) {
+      // max-height: 500px;
+    }
+  }

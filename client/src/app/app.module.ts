@@ -13,6 +13,7 @@ import { SharedModule } from './shared/shared.module';
 import { SpeakersModule } from './speakers/speakers.module';
 import { TicketComponent } from './tickets/ticket/ticket.component';
 import { TicketsComponent } from './tickets/tickets.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TicketsComponent } from './tickets/tickets.component';
     TicketsComponent,
     TicketComponent,
     IntroComponent,
-    LocationComponent
+    LocationComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,

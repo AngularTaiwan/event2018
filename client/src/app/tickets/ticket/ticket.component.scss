@@ -67,7 +67,7 @@
   z-index: 11;
   clip-path: polygon(63% 0, 100% 0, 0 100%, 0 63%);
   .ribbon-text {
-    font-family: 'Noto Sans TC';
+    font-family: "Noto Sans TC";
     color: white;
     transform: rotate(-49deg);
     line-height: 344%;
@@ -103,7 +103,7 @@
   top: 0;
   margin-top: 8px;
   margin-bottom: 8px;
-  background-image: url('/assets/images/ticketContainer.svg');
+  background-image: url("/assets/images/ticketContainer.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
@@ -135,13 +135,18 @@
     .timestamp {
       margin: 0;
       min-height: 20px;
-      font-family: 'Noto Sans TC';
+      font-family: "Noto Sans TC";
       font-style: normal;
       font-weight: 300;
       font-size: 14px;
       color: rgba(1, 22, 39, 0.6);
       letter-spacing: 0.25px;
       line-height: 20px;
+      &.ribbon-text {
+        color: #3f51b5;
+        font-size: 16px;
+        font-weight: 500;
+      }
       @media screen and (max-width: 992px) {
         font-size: 12px;
       }
@@ -151,7 +156,7 @@
     }
 
     .event {
-      font-family: 'Noto Sans TC';
+      font-family: "Noto Sans TC";
       font-size: 20px;
       color: rgba(1, 22, 39, 0.87);
       letter-spacing: 0.4px;
@@ -185,5 +190,13 @@
         font-size: 20px;
       }
     }
+  }
+}
+
+.isIE {
+  .ribbon-upper,
+  .ribbon-body,
+  .ribbon-lower {
+    display: none;
   }
 }
