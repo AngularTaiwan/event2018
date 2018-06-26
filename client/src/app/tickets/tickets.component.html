@@ -16,7 +16,14 @@
           <p class="date text-center">11/17 星期六</p>
           <app-ticket *ngFor="let t of workshopTickets" [ticket]="t"></app-ticket>
         </div>
+      </div>
 
+      <div class="col-12 col-sm-12 col-md-12 mt-5">
+        <div class="tickets-container">
+          <h5 class="title text-center">企業限定</h5>
+          <p class="date text-center">11/16 星期五</p>
+          <app-ticket *ngFor="let t of coporationTickets" [ticket]="t"></app-ticket>
+        </div>
       </div>
 
     </div>
