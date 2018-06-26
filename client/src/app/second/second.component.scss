@@ -1,19 +1,71 @@
+@import 'node_modules/@angular/material/theming';
+@import '../../styles';
+
+@keyframes slideIn {
+  0%{
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 .second{
-    background-color: #3F51B5;
-    height: 50vh;
-    max-height: 560px;
+    background-color: map-get($mat-indigo, 500);;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    overflow: hidden;
     max-width: 100%;
     position: relative;
-    // overflow: hidden;
     @media screen and (max-width: 768px) {
-      // max-height: 500px;
+    }
+    .slideInAnimation{
+      animation: slideIn;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    .mat-card{
+        transform: translateY(400px);
+        opacity: 0;
+        @include flatShadow(box, map-get($mat-indigo, 700), 600, false, true, right);
+      }
+    .mat-card:first-of-type{
+      animation-delay: 0s;
+    }
+    .mat-card:nth-of-type(2){
+      animation-delay: 0.4s;
+    }
+    .mat-card:nth-of-type(3){
+      animation-delay: 0.8s;
+    }
+    .second_img{
+      width: 25%;
+      height: auto;
+      padding-right: 20px;
+      @media screen and (max-width: 576px) {
+        width: 20%;
+        padding-right: 0px;
+      }
     }
     .second_slogan{
-        font-family: "Noto Sans TC";
-        color: white;
-        font-size: 20px;
-        letter-spacing: 0.4px;
-        line-height: 28px;
-        font-weight: 300;
+      font-family: 'Noto Sans TC';
+      font-size: 18px;
+      font-weight: 300;
+      color: rgba(1, 22, 39, 0.87);
+      letter-spacing: 0.4px;
+      line-height: 30px;
+      margin-left: 20px;
+      margin-top: 0px;
+      @media screen and (max-width: 992px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 14px;
+        margin-left: 0px;
+        margin-top: 8px;
+        text-align: center;
+      }
     }
   }

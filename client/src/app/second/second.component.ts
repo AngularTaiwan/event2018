@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-second',
@@ -12,4 +12,13 @@ export class SecondComponent implements OnInit {
   ngOnInit() {
   }
 
+  @HostListener('document:scroll', ['$event']) onScrollEvent($event) {
+    const windowHeight = $event.srcElement.documentElement.clientHeight;
+    const windowScroll = $event.srcElement.documentElement.scrollTop;
+    if (windowScroll / windowHeight >= 0.5) {
+      document.getElementsByClassName('mat-card')[0].classList.add('slideInAnimation');
+      document.getElementsByClassName('mat-card')[1].classList.add('slideInAnimation');
+      document.getElementsByClassName('mat-card')[2].classList.add('slideInAnimation');
+    }
+  }
 }
