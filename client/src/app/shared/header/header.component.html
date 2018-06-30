@@ -2,12 +2,15 @@
   <img src="/assets/images/logo.svg">
   <h1 class="pl-sm-2">Angular Taiwan</h1>
   <nav class="ml-sm-auto">
-    <a class="d-none d-md-inline-block" href="#" mat-button>講者</a>
-    <a class="d-none d-md-inline-block" href="#" mat-button>議程</a>
-    <a class="d-none d-md-inline-block" href="#tickets" mat-button>票種</a>
-    <a class="d-none d-md-inline-block" href="#location" mat-button>地點</a>
-    <a class="d-none d-lg-inline-block" href="#" mat-button>共筆</a>
-    <button class="d-none d-sm-inline-block buy-ticket" mat-raised-button>BUY TICKET</button>
+    <a class="d-none d-md-inline-block header_link" href="#" mat-button>講者</a>
+    <a class="d-none d-md-inline-block header_link" href="#" mat-button>議程</a>
+    <a class="d-none d-md-inline-block header_link" href="#tickets" mat-button>票種</a>
+    <a class="d-none d-md-inline-block header_link" href="#location" mat-button>地點</a>
+    <a class="d-none d-lg-inline-block header_link" href="#" mat-button>共筆</a>
+    <button class="d-none d-sm-inline-block buy-ticket" mat-raised-button>
+      <mat-icon class="mr-1 d-inline-flex align-items-center" svgIcon="ticket" style="width: 22px; height: 22px;"></mat-icon>
+      BUY TICKET
+    </button>
 
     <button class="d-lg-none" mat-icon-button [matMenuTriggerFor]="appMenu">
       <mat-icon>more_vert</mat-icon>
@@ -23,5 +26,5 @@
 </mat-toolbar>
 <!-- mobile float action button -->
 <button class="d-sm-none float" mat-fab>
-  <mat-icon>how_to_vote</mat-icon>
+  <mat-icon svgIcon="ticket" style="width: 26px; height: 26px;"></mat-icon>
 </button>
