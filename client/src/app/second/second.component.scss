@@ -51,18 +51,20 @@
     }
     .second_slogan{
       font-family: 'Noto Sans TC';
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 300;
       color: rgba(1, 22, 39, 0.87);
       letter-spacing: 0.4px;
-      line-height: 30px;
+      line-height: 32px;
       margin-left: 20px;
       margin-top: 0px;
       @media screen and (max-width: 992px) {
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 30px;
       }
       @media screen and (max-width: 576px) {
-        font-size: 14px;
+        font-size: 16px;
+        line-height: 26px;
         margin-left: 0px;
         margin-top: 8px;
         text-align: center;
