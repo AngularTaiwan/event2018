@@ -1,20 +1,20 @@
 import { AgmCoreModule } from '@agm/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
-  MatToolbarModule,
-  MatMenuModule,
-  MatIconModule,
   MatCardModule,
+  MatIconModule,
+  MatMenuModule,
+  MatToolbarModule,
   MatTooltipModule
 } from '@angular/material';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { AnchorClickDirective } from './anchor-click.directive';
 import { CountdownComponent } from './countdown/countdown.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { HttpClientModule } from '@angular/common/http';
 
 const materialModule = [
   MatButtonModule,
@@ -26,7 +26,13 @@ const materialModule = [
 ];
 
 @NgModule({
-  imports: [CommonModule, AgmCoreModule, materialModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    AgmCoreModule,
+    ...materialModule,
+    HttpClientModule,
+    TranslateModule
+  ],
   declarations: [
     CountdownComponent,
     HeaderComponent,
@@ -38,7 +44,7 @@ const materialModule = [
     HeaderComponent,
     AnchorClickDirective,
     FooterComponent,
-    materialModule
+    ...materialModule
   ]
 })
 export class SharedModule {}

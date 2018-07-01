@@ -26,6 +26,8 @@
     "@angular/pwa": "^0.6.3",
     "@angular/router": "6.0.5",
     "@angular/service-worker": "6.0.5",
+    "@ngx-translate/core": "^10.0.2",
+    "@ngx-translate/http-loader": "^3.0.1",
     "bootstrap": "^4.1.1",
     "bowser": "^1.9.3",
     "classlist.js": "^1.1.20150312",

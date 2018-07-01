@@ -1,0 +1,42 @@
+{
+  "speaker": "講者",
+  "session": "議程",
+  "ticket": "票種",
+  "location": "地點",
+  "collaborative": "共筆",
+  "tickets": {
+    "speaker": "專家演講",
+    "workshop": "工作坊",
+    "enterprise": "企業限定",
+    "friday": "星期五",
+    "saturday": "星期六"
+  },
+  "conference": {
+    "location": "張榮發基金會國際會議中心",
+    "room": "1101會議廳",
+    "address": "台北市中正區中山南路11號",
+    "gotoMap": "前往地圖",
+    "navigation": "規劃路線",
+    "train": {
+      "title": "捷運",
+      "description":
+        "搭乘 淡水信義線<br>抵達 台大醫院捷運站              <br>步行5分鐘"
+    },
+    "bus": {
+      "title": "公車",
+      "description":
+        "搭乘 37、230、630、仁愛幹線<br>抵達 仁愛中山路口<br>步行3分鐘"
+    }
+  },
+  "workshop": {
+    "location": "淡江大學台北校區",
+    "room": "D504 D506教室"
+  },
+  "second": {
+    "slogan1": "探討 Angular 的現在與未來<br> 連結世界從此開始",
+    "slogan2": " 台灣首場大型 Angular 盛會<br> 點燃滿腔技術熱血",
+    "slogan3": "企業級現代化網站必備前端技術<br> 展開你與人才對話"
+  },
+  "footer":
+    " Angular Taiwan 是一個位於台灣並專注於 Angular 開發框架的開放社團，任何人都可以自由加入社團。          <br>在這個社團內大家可以盡情的發布任何與 Angular 有關的文章、課程、影片，或是提出任何相關 Angular 相關的問題與討論。"
+}

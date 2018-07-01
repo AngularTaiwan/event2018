@@ -1,5 +1,5 @@
 <section id="location" class="location">
-  <h1 class="topic text-center">地點</h1>
+  <h1 class="topic text-center">{{ 'location' | translate }}</h1>
   <div class="container">
     <mat-card class="map">
       <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
@@ -10,31 +10,29 @@
     <div class="info">
       <div class="info_card d-flex flex-column">
         <div class="info_card_content">
-          <h5>張榮發基金會國際會議中心
-            <br>1101會議廳</h5>
-          <p>台北市中正區中山南路11號</p>
+          <h5>{{ 'conference.location' | translate }}
+            <br>{{ 'conference.room' | translate }}</h5>
+          <p>{{ 'conference.address' | translate }}</p>
         </div>
         <mat-card-actions class="info_card_action">
-          <button mat-button color="primary">前往地圖</button>
+          <a target="_blank" href="https://www.google.com/maps?ll=25.038721,121.519038&z=18&t=m&hl=zh-TW&gl=TW&mapclient=embed&cid=11093818831152987775"
+            mat-button color="primary">{{ 'conference.gotoMap' | translate }}</a>
         </mat-card-actions>
       </div>
       <div class="info_card d-flex flex-column">
         <div class="info_card_content d-flex flex-row">
           <div class="info_card_content_item">
-            <h5>捷運</h5>
-            <p>搭乘 淡水信義線
-              <br>抵達 台大醫院捷運站
-              <br>步行5分鐘</p>
+            <h5>{{ 'conference.train.title' | translate }}</h5>
+            <p [innerHTML]="'conference.train.description' | translate"></p>
           </div>
           <div class="info_card_content_item">
-            <h5>公車</h5>
-            <p>搭乘 37、230、630、仁愛幹線
-              <br>抵達 仁愛中山路口
-              <br>步行3分鐘</p>
+            <h5>{{ 'conference.bus.title' | translate }}</h5>
+            <p [innerHTML]="'conference.bus.description' | translate"></p>
           </div>
         </div>
         <mat-card-actions class="info_card_action">
-          <button mat-button color="primary">規劃路線</button>
+          <a target="_blank" href="https://www.google.com/maps/dir//100%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E4%B8%AD%E5%B1%B1%E5%8D%97%E8%B7%AF11%E8%99%9F%E5%BC%B5%E6%A6%AE%E7%99%BC%E5%9F%BA%E9%87%91%E6%9C%83/@25.038721,121.519038,18z/data=!4m16!1m6!3m5!1s0x0:0x99f529730969be7f!2z5by15qau55m85Z-66YeR5pyD!8m2!3d25.0387255!4d121.5186738!4m8!1m0!1m5!1m1!1s0x3442a975c13ae63d:0x99f529730969be7f!2m2!1d121.5186738!2d25.0387255!3e3?hl=zh-TW"
+            mat-button color="primary">{{ 'conference.navigation' | translate }}</a>
         </mat-card-actions>
       </div>
     </div>

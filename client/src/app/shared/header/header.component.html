@@ -2,11 +2,11 @@
   <img src="/assets/images/logo.svg">
   <h1 class="pl-sm-2">Angular Taiwan</h1>
   <nav class="ml-sm-auto">
-    <a class="d-none d-md-inline-block header_link" href="#" mat-button>講者</a>
-    <a class="d-none d-md-inline-block header_link" href="#" mat-button>議程</a>
-    <a class="d-none d-md-inline-block header_link" href="#tickets" mat-button>票種</a>
-    <a class="d-none d-md-inline-block header_link" href="#location" mat-button>地點</a>
-    <a class="d-none d-lg-inline-block header_link" href="#" mat-button>共筆</a>
+    <a class="d-none d-md-inline-block header_link" href="#" mat-button>{{ 'speaker' | translate }}</a>
+    <a class="d-none d-md-inline-block header_link" href="#" mat-button>{{ 'session' | translate }}</a>
+    <a class="d-none d-md-inline-block header_link" href="#tickets" mat-button>{{ 'ticket' | translate}}</a>
+    <a class="d-none d-md-inline-block header_link" href="#location" mat-button>{{ 'location' | translate}}</a>
+    <a class="d-none d-lg-inline-block header_link" href="#" mat-button>{{ 'collaborative' | translate}}</a>
     <button class="d-none d-sm-inline-block buy-ticket" mat-raised-button>
       <mat-icon class="mr-1" svgIcon="ticket"></mat-icon>
       BUY TICKET
@@ -16,11 +16,11 @@
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #appMenu="matMenu">
-      <a class="d-md-none" href="#" mat-menu-item>講者</a>
-      <a class="d-md-none" href="#" mat-menu-item>議程</a>
-      <a class="d-md-none" href="#tickets" mat-menu-item>票種</a>
-      <a class="d-md-none" href="#location" mat-menu-item>地點</a>
-      <a href="#" mat-menu-item>共筆</a>
+      <a class="d-md-none" href="#" mat-menu-item>{{ 'speaker' | translate }}</a>
+      <a class="d-md-none" href="#" mat-menu-item>{{ 'session' | translate }}</a>
+      <a class="d-md-none" href="#tickets" mat-menu-item>{{ 'ticket' | translate}}</a>
+      <a class="d-md-none" href="#location" mat-menu-item>{{ 'location' | translate}}</a>
+      <a href="#" mat-menu-item>{{ 'collaborative' | translate}}</a>
     </mat-menu>
   </nav>
 </mat-toolbar>

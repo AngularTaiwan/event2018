@@ -1,27 +1,27 @@
 <section id="tickets" class="tickets">
-  <h1 class="topic text-center">票種</h1>
+  <h1 class="topic text-center">{{ 'ticket' | translate }}</h1>
   <div class="container">
     <div class="row justify-content-cneter">
       <div class="col-12 col-sm-10 col-md-6">
         <div class="tickets-container">
-          <h5 class="title text-center">專家演講</h5>
-          <p class="date text-center">11/16 星期五</p>
+          <h5 class="title text-center">{{ 'tickets.speaker' | translate }}</h5>
+          <p class="date text-center">11/16 {{ 'tickets.friday' | translate }}</p>
           <app-ticket *ngFor="let t of exportTickets" [ticket]="t"></app-ticket>
         </div>
       </div>
 
       <div class="col-12 col-sm-10 col-md-6">
         <div class="tickets-container">
-          <h5 class="title text-center">工作坊</h5>
-          <p class="date text-center">11/17 星期六</p>
+          <h5 class="title text-center">{{ 'tickets.workshop' | translate }}</h5>
+          <p class="date text-center">11/17 {{ 'tickets.saturday' | translate }}</p>
           <app-ticket *ngFor="let t of workshopTickets" [ticket]="t"></app-ticket>
         </div>
       </div>
 
       <div class="col-12 col-sm-12 col-md-12 mt-5">
         <div class="tickets-container">
-          <h5 class="title text-center">企業限定</h5>
-          <p class="date text-center">11/16 (星期五) ~ 11/16 (星期六)</p>
+          <h5 class="title text-center">{{ 'tickets.enterprise' | translate }}</h5>
+          <p class="date text-center">11/16 ({{ 'tickets.friday' | translate }}) ~ 11/16 ({{ 'tickets.saturday' | translate }})</p>
           <app-ticket *ngFor="let t of coporationTickets" [ticket]="t"></app-ticket>
         </div>
       </div>

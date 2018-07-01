@@ -2,25 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Ticket } from './ticket/ticket';
+import { TranslateService } from '@ngx-translate/core';
 
-@Component({
-  selector: 'app-tickets',
-  templateUrl: './tickets.component.html',
-  styleUrls: ['./tickets.component.scss']
-})
-export class TicketsComponent implements OnInit {
-  exportTickets: Ticket[];
-  workshopTickets: Ticket[];
-  coporationTickets: Ticket[];
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-      'help',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/images/help.svg')
-    );
-  }
-
-  ngOnInit() {
-    this.exportTickets = [
+const ticketsInfomation = {
+  'zh-tw': {
+    exportTickets: [
       {
         title: '早鳥票',
         ribbonText: '限量發售',
@@ -35,9 +21,8 @@ export class TicketsComponent implements OnInit {
         price: 7500,
         desc: '三人套票'
       }
-    ];
-
-    this.workshopTickets = [
+    ],
+    workshopTickets: [
       {
         title: '入門工作坊',
         desc: '08:00-17:00',
@@ -53,9 +38,8 @@ export class TicketsComponent implements OnInit {
         desc: '13:00-17:00',
         price: 3000
       }
-    ];
-
-    this.coporationTickets = [
+    ],
+    coporationTickets: [
       {
         title: '企業贊助(白金)',
         price: 25000,
@@ -76,5 +60,35 @@ export class TicketsComponent implements OnInit {
         `
       }
     ]
+  }
+};
+
+@Component({
+  selector: 'app-tickets',
+  templateUrl: './tickets.component.html',
+  styleUrls: ['./tickets.component.scss']
+})
+export class TicketsComponent implements OnInit {
+  currentLang: string;
+  exportTickets: Ticket[];
+  workshopTickets: Ticket[];
+  coporationTickets: Ticket[];
+  constructor(
+    iconRegistry: MatIconRegistry,
+    sanitizer: DomSanitizer,
+    private translateService: TranslateService
+  ) {
+    this.currentLang = translateService.currentLang;
+    iconRegistry.addSvgIcon(
+      'help',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/images/help.svg')
+    );
+  }
+
+  ngOnInit() {
+    this.exportTickets = ticketsInfomation[this.currentLang].exportTickets;
+    this.workshopTickets = ticketsInfomation[this.currentLang].workshopTickets;
+    this.coporationTickets =
+      ticketsInfomation[this.currentLang].coporationTickets;
   }
 }
