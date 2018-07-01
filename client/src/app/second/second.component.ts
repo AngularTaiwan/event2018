@@ -15,7 +15,7 @@ export class SecondComponent implements OnInit {
     if (
       !this.showSlidInAnimation &&
       (windowHeight > 888 ||
-        (windowHeight <= 888 && windowScroll / windowHeight >= 0.5))
+        (windowHeight <= 888 && windowScroll / windowHeight >= 0.4))
     ) {
       this.showSlidInAnimation = true;
     }
