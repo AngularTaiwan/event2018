@@ -187,17 +187,20 @@
         width: 100%;
         text-align: center;
         padding: 8px 12px;
+
         margin-bottom: 0;
       }
     }
     .detail_location {
-      padding: 4px 24px;
+
+      padding: 4px 20px;
       text-shadow: 0 0 30px rgba(0, 0, 51, 0.8), 0 0 20px rgba(0, 0, 51, 0.8);
       @media screen and (max-width: 767px) {
         width: 100%;
         text-align: center;
-        padding: 8px 12px;
+        padding: 4px 12px;
         margin-top: 0;
+        margin-bottom: 0;
       }
     }
     .detail_divider {
@@ -234,7 +237,7 @@ app-countdown {
 
 .scroll-down {
   position: absolute;
-  bottom: 30px;
+  bottom: 8px;
   left: 50%;
   margin-left: -16px;
   display: block;
