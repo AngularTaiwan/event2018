@@ -14,7 +14,8 @@
   letter-spacing: 1.25px;
 
   @media (min-width: 576px) {
-    width: 160px;
+    width: auto; //避免內容超出
+    // width: 160px;
    }
 
 
@@ -27,4 +28,10 @@
   color: white;
   z-index: 98;
 
+}
+
+.header_link{
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: .1em;
 }

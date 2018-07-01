@@ -11,6 +11,7 @@ import { Ticket } from './ticket/ticket';
 export class TicketsComponent implements OnInit {
   exportTickets: Ticket[];
   workshopTickets: Ticket[];
+  coporationTickets: Ticket[];
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       'help',
@@ -33,25 +34,6 @@ export class TicketsComponent implements OnInit {
         title: '團體票',
         price: 7500,
         desc: '三人套票'
-      },
-      {
-        title: '企業贊助(白金)',
-        price: 25000,
-        desc: '企業限定',
-        tooltip: `專家演講票 5 張
-        實戰工作坊 3 張
-        官網 LOGO 露出
-        企業人才媒合
-        `
-      },
-      {
-        title: '企業贊助(銀級)',
-        price: 10000,
-        desc: '企業限定',
-        tooltip: `專家演講票 2 張
-        實戰工作坊 2 張
-        官網 LOGO 露出
-        `
       }
     ];
 
@@ -72,5 +54,27 @@ export class TicketsComponent implements OnInit {
         price: 3000
       }
     ];
+
+    this.coporationTickets = [
+      {
+        title: '企業贊助(白金)',
+        price: 25000,
+        desc: '企業限定',
+        tooltip: `專家演講票 5 張
+        實戰工作坊 3 張
+        官網 LOGO 露出
+        企業人才媒合
+        `
+      },
+      {
+        title: '企業贊助(銀級)',
+        price: 10000,
+        desc: '企業限定',
+        tooltip: `專家演講票 2 張
+        實戰工作坊 2 張
+        官網 LOGO 露出
+        `
+      }
+    ]
   }
 }

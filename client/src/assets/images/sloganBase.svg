@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="170" viewBox="0 0 160 170">
+  <defs>
+    <polygon id="sloganbase-a" points="0 28.146 78.948 0 160 27.644 146.852 132.235 78.948 169.931 12.013 132.75"/>
+    <filter id="sloganbase-b" width="102.5%" height="102.4%" x="-1.2%" y="-1.2%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="2"/>
+      <feOffset in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+  <g fill="none">
+    <use fill="#303F9F" fill-rule="evenodd" xlink:href="#sloganbase-a"/>
+    <use fill="#000" filter="url(#sloganbase-b)" xlink:href="#sloganbase-a"/>
+    <polygon fill="#2B3A99" points="78.948 0 160 27.644 146.852 132.235 78.948 169.931"/>
+  </g>
+</svg>

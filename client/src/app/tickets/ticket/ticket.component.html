@@ -1,4 +1,4 @@
-<div class="ticket-base">
+<div class="ticket-base" [ngClass]="{'isIE': isIE}">
   <ng-container *ngIf="ticket.ribbonText">
     <div class="ribbon-upper"></div>
     <div class="ribbon-body">
@@ -10,10 +10,11 @@
     <div class="ticket-wrapper ticket-left">
       <div class="left-block d-flex flex-column justify-content-center">
         <div *ngIf="ticket.desc !== undefined" class="timestamp">{{ticket.desc}}</div>
+        <div *ngIf="isIE && ticket.ribbonText" class="timestamp ribbon-text">{{ticket.ribbonText}}</div>
         <div class="event d-flex align-items-center">
           <div>{{ticket.title}}</div>
           <mat-icon svgIcon="help" class="ml-2 help d-none d-sm-inline-block" color="primary" [matTooltip]="ticket.tooltip"
-            [matTooltipDisabled]="!ticket.tooltip"></mat-icon>
+            [matTooltipDisabled]="!ticket.tooltip" matTooltipClass="ticket-tooltip" matTooltipPosition="right"></mat-icon>
         </div>
       </div>
     </div>
