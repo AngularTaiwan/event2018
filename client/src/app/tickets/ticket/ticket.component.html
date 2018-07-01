@@ -13,7 +13,7 @@
         <div *ngIf="isIE && ticket.ribbonText" class="timestamp ribbon-text">{{ticket.ribbonText}}</div>
         <div class="event d-flex align-items-center">
           <div>{{ticket.title}}</div>
-          <mat-icon svgIcon="help" class="ml-2 help d-none d-sm-inline-block" color="primary" [matTooltip]="ticket.tooltip"
+          <mat-icon svgIcon="help" class="ml-2 help d-none d-sm-inline-block" color="primary" [matTooltip]="ticket.tooltip" *ngIf="ticket.tooltip"
             [matTooltipDisabled]="!ticket.tooltip" matTooltipClass="ticket-tooltip" matTooltipPosition="right"></mat-icon>
         </div>
       </div>
