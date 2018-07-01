@@ -1,0 +1,42 @@
+{
+  "speaker": "SPEAKERS",
+  "session": "SESSIONS",
+  "ticket": "PRICE",
+  "location": "LOCATION",
+  "collaborative": "COLLABORATIVE",
+  "tickets": {
+    "speaker": "SESSIONS",
+    "workshop": "WORKSHOPS",
+    "enterprise": "Enterprise Only",
+    "friday": "Friday",
+    "saturday": "Saturday"
+  },
+  "conference": {
+    "location": "CHANG YUNG-FA FOUNDATION Internation Convertion Center",
+    "room": "1101 Conference Room",
+    "address": "No.11, Zhongshan S. Rd., Taipei City 10048, Taiwan",
+    "gotoMap": "Google Map",
+    "navigation": "Planning Route",
+    "train": {
+      "title": "MRT",
+      "description":
+        "Take line 2 to National Taiwan University Hospital Station and walk one block south to Sec 1, Renai Road (also called 3rd Blvd). This walk takes approximately five minutes."
+    },
+    "bus": {
+      "title": "BUS",
+      "description":
+        "To Renai-Zhongshan Intersection: Bus Nos. 37, 249, 261, 270, 621, 630, 651, Renai Line"
+    }
+  },
+  "workshop": {
+    "location": "Tamkang University Taipei Campus",
+    "room": "D504 D506 Classroom"
+  },
+  "second": {
+    "slogan1": "探討 Angular 的現在與未來<br> 連結世界從此開始",
+    "slogan2": " 台灣首場大型 Angular 盛會<br> 點燃滿腔技術熱血",
+    "slogan3": "企業級現代化網站必備前端技術<br> 展開你與人才對話"
+  },
+  "footer":
+    "Angular Taiwan is an Angular community in Taiwan. We are welcome anyone to join us, and feel free to post and share any articles、courses、videos or any discussion that related to Angular."
+}

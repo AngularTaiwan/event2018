@@ -10,7 +10,13 @@ export class AppComponent {
   constructor(translate: TranslateService) {
     translate.setDefaultLang('zh-tw');
     if (!localStorage.getItem('lang')) {
-      localStorage.setItem('lang', 'zh-tw');
+      let browserLang = (
+        navigator.language || (navigator as any).browserLanguage
+      ).toLowerCase();
+      if (browserLang !== 'en' && browserLang !== 'zh-tw') {
+        browserLang = 'en';
+      }
+      localStorage.setItem('lang', browserLang);
     }
     const lang = localStorage.getItem('lang');
     translate.use(lang);

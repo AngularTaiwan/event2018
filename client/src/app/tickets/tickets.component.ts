@@ -60,6 +60,62 @@ const ticketsInfomation = {
         `
       }
     ]
+  },
+  en: {
+    exportTickets: [
+      {
+        title: 'Early Bird',
+        ribbonText: 'Limited',
+        price: 2000
+      },
+      {
+        title: 'General',
+        price: 3000
+      },
+      {
+        title: 'Group Deal',
+        price: 7500,
+        desc: 'Triple Tickets'
+      }
+    ],
+    workshopTickets: [
+      {
+        title: 'Basic',
+        desc: '08:00-17:00',
+        price: 2000
+      },
+      {
+        title: 'Advanced',
+        desc: '08:00-12:00',
+        price: 3000
+      },
+      {
+        title: 'Advanced',
+        desc: '13:00-17:00',
+        price: 3000
+      }
+    ],
+    coporationTickets: [
+      {
+        title: 'PLATINUM',
+        price: 25000,
+        desc: '',
+        tooltip: `5 Session Tickets
+        3 Workshop Tickets
+        Coop's Logo expose
+        企業人才媒合
+        `
+      },
+      {
+        title: 'SILVER',
+        price: 10000,
+        desc: '',
+        tooltip: `2 Session Tickets
+        2 Workshop Tickets
+        Coop's Logo expose
+        `
+      }
+    ]
   }
 };
 
