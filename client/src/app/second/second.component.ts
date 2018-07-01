@@ -11,11 +11,13 @@ export class SecondComponent implements OnInit {
   @HostListener('document:scroll', ['$event'])
   onScrollEvent($event) {
     const windowHeight = $event.srcElement.documentElement.clientHeight;
-    const windowScroll = $event.srcElement.documentElement.scrollTop;
+    const windowScroll =
+      $event.srcElement.documentElement.scrollTop ||
+      $event.srcElement.body.scrollTop;
     if (
       !this.showSlidInAnimation &&
       (windowHeight > 888 ||
-        (windowHeight <= 888 && windowScroll / windowHeight >= 0.4))
+        (windowHeight <= 888 && windowScroll / windowHeight >= 0.35))
     ) {
       this.showSlidInAnimation = true;
     }
