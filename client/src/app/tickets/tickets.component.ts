@@ -10,7 +10,8 @@ const ticketsInfomation = {
       {
         title: '早鳥票',
         ribbonText: '限量發售',
-        price: 2000
+        price: 2400,
+        tooltip: `限量 50 張`
       },
       {
         title: '一般票',
@@ -18,7 +19,7 @@ const ticketsInfomation = {
       },
       {
         title: '團體票',
-        price: 7500,
+        price: 8000,
         desc: '三人套票'
       }
     ],
@@ -52,7 +53,7 @@ const ticketsInfomation = {
       },
       {
         title: '企業贊助(銀級)',
-        price: 10000,
+        price: 12000,
         desc: '企業限定',
         tooltip: `專家演講票 2 張
         實戰工作坊 2 張
@@ -66,7 +67,8 @@ const ticketsInfomation = {
       {
         title: 'Early Bird',
         ribbonText: 'Limited',
-        price: 2000
+        price: 2400,
+        tooltip: `50 Tickets Only`
       },
       {
         title: 'General',
@@ -74,7 +76,7 @@ const ticketsInfomation = {
       },
       {
         title: 'Group Deal',
-        price: 7500,
+        price: 8000,
         desc: 'Triple Tickets'
       }
     ],
@@ -108,7 +110,7 @@ const ticketsInfomation = {
       },
       {
         title: 'SILVER',
-        price: 10000,
+        price: 12000,
         desc: '',
         tooltip: `2 Session Tickets
         2 Workshop Tickets
