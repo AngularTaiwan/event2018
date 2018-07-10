@@ -8,6 +8,12 @@ const ticketsInfomation = {
   'zh-tw': {
     exportTickets: [
       {
+        title: '盲鳥票',
+        ribbonText: '限量發售',
+        price: 2000,
+        tooltip: `限量 50 張`
+      },
+      {
         title: '早鳥票',
         ribbonText: '限量發售',
         price: 2400,
@@ -64,6 +70,12 @@ const ticketsInfomation = {
   },
   en: {
     exportTickets: [
+      {
+        title: 'Blind Bird',
+        ribbonText: 'Limited',
+        price: 2000,
+        tooltip: `50 Tickets Only`
+      },
       {
         title: 'Early Bird',
         ribbonText: 'Limited',
