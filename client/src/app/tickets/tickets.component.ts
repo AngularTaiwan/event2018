@@ -10,22 +10,22 @@ const ticketsInfomation = {
       {
         title: '盲鳥票',
         ribbonText: '限量發售',
-        price: 2000,
+        price: 1800,
         tooltip: `限量 50 張`
       },
       {
         title: '早鳥票',
         ribbonText: '限量發售',
-        price: 2400,
+        price: 2000,
         tooltip: `限量 50 張`
       },
       {
         title: '一般票',
-        price: 3000
+        price: 2500
       },
       {
         title: '團體票',
-        price: 8000,
+        price: 6400,
         desc: '三人套票'
       }
     ],
@@ -73,22 +73,22 @@ const ticketsInfomation = {
       {
         title: 'Blind Bird',
         ribbonText: 'Limited',
-        price: 2000,
+        price: 1800,
         tooltip: `50 Tickets Only`
       },
       {
         title: 'Early Bird',
         ribbonText: 'Limited',
-        price: 2400,
+        price: 2000,
         tooltip: `50 Tickets Only`
       },
       {
         title: 'General',
-        price: 3000
+        price: 2500
       },
       {
         title: 'Group Deal',
-        price: 8000,
+        price: 6400,
         desc: 'Triple Tickets'
       }
     ],
