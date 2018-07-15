@@ -25,7 +25,7 @@ const materialModule = [
   MatIconModule,
   MatCardModule,
   MatTooltipModule,
-  MatSnackBarModule
+  MatSnackBarModule,
   MatDialogModule,
 ];
 
