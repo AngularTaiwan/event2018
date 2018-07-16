@@ -7,10 +7,11 @@
     <a class="d-none d-md-inline-block header_link" href="#tickets" mat-button>{{ 'ticket' | translate}}</a>
     <a class="d-none d-md-inline-block header_link" href="#location" mat-button>{{ 'location' | translate}}</a>
     <a class="d-none d-lg-inline-block header_link" href="#" mat-button>{{ 'collaborative' | translate}}</a>
-    <button class="d-none d-sm-inline-block buy-ticket" mat-raised-button>
+    <a href="https://www.accupass.com/go/ngtw2018" class="d-none d-sm-inline-block buy-ticket" target="_blank"
+      mat-raised-button>
       <mat-icon class="mr-1" svgIcon="ticket"></mat-icon>
       BUY TICKET
-    </button>
+    </a>
 
     <button class="d-lg-none" mat-icon-button [matMenuTriggerFor]="appMenu">
       <mat-icon>more_vert</mat-icon>
