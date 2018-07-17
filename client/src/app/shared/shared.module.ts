@@ -10,6 +10,7 @@ import {
   MatToolbarModule,
   MatTooltipModule
 } from '@angular/material';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TranslateModule } from '@ngx-translate/core';
 import { AnchorClickDirective } from './anchor-click.directive';
 import { CountdownComponent } from './countdown/countdown.component';
@@ -22,7 +23,8 @@ const materialModule = [
   MatMenuModule,
   MatIconModule,
   MatCardModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

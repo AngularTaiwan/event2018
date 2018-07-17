@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SwUpdate } from '@angular/service-worker';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,11 @@ import { SwUpdate } from '@angular/service-worker';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(translate: TranslateService, private swUpdate: SwUpdate) {
+  constructor(
+    translate: TranslateService,
+    private swUpdate: SwUpdate,
+    private snackBar: MatSnackBar
+  ) {
     translate.setDefaultLang('zh-tw');
     if (!localStorage.getItem('lang')) {
       let browserLang = (
@@ -26,9 +31,13 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     if (this.swUpdate.isEnabled) {
       this.swUpdate.available.subscribe(() => {
-        if (confirm('New version available. Load New Version?')) {
+        const snackBarRef = this.snackBar.open(
+          'New version available. Update?',
+          'Update'
+        );
+        snackBarRef.afterDismissed().subscribe(() => {
           window.location.reload();
-        }
+        });
       });
     }
   }
