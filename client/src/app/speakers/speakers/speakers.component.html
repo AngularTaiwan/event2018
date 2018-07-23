@@ -1,41 +1,52 @@
 <section id="speakers" class="section align-center">
+  <h1 class="topic text-center">{{ 'Speaker' | translate }}</h1>
+  <!-- <p class="text-alt">Meet our
+    <span class="highlight">professonals</span>
+  </p> -->
   <div class="container">
+    <div class="row d-flex justify-content-center">
+      <mat-card class="speaker-card" *ngFor="let speaker of speakers;let i = index;" (click)="openDialog()">
+        <div class="speaker">
+          <div class="photo-wrapper">
+            <img [src]="speaker.img" alt="John Doe" class="img-responsive">
+          </div>
+          <div class="speaker-text">
+            <h3 class="name">{{ speaker.name }}</h3>
+            <p class="des text-alt">
+              <small>{{ speaker.title }}</small>
+            </p>
+            <p class="about">{{ speaker.about }}</p>
+          </div>
+          <ul class="speaker-socials">
+            <li *ngIf="speaker.fb">
+              <a [href]="speaker.fb">
+                <img src="../assets/images/facebook.svg"/>
+              </a>
+            </li>
+            <li *ngIf="speaker.twitter">
+              <a [href]="speaker.twitter">
+                <img src="../assets/images/twitter.svg"/>
+              </a>
+            </li>
+            <li *ngIf="speaker.github">
+              <a [href]="speaker.github">
+                <img src="../assets/images/github.svg"/>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </mat-card>
+    </div>
+
+
+
+    <!-- OLD TEMPLATE -->
     <span class="icon section-icon icon-faces-users-04"></span>
     <h3>講者</h3>
-    <p class="text-alt">Meet our
-      <span class="highlight">professonals</span>
-    </p>
+
     <br />
     <br />
 
-    <div class="col-sm-4" *ngFor="let speaker of speakers">
-      <div class="speaker">
-        <div class="photo-wrapper rounded">
-          <img [src]="speaker.img" alt="John Doe" class="img-responsive">
-        </div>
-        <h3 class="name">{{ speaker.name }}</h3>
-        <p class="text-alt">
-          <small>{{ speaker.title }}</small>
-        </p>
-        <p class="about">{{ speaker.about }}</p>
-        <ul class="speaker-socials">
-          <li *ngIf="speaker.fb">
-            <a [href]="speaker.fb">
-              <span class="fa fa-facebook"></span>
-            </a>
-          </li>
-          <li *ngIf="speaker.twitter">
-            <a [href]="speaker.twitter">
-              <span class="fa fa-twitter"></span>
-            </a>
-          </li>
-          <li *ngIf="speaker.github">
-            <a [href]="speaker.github">
-              <span class="fa fa-github"></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+
   </div>
 </section>

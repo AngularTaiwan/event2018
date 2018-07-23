@@ -1,0 +1,67 @@
+@import '../../../styles';
+.section {
+  padding-top: 80px;
+  padding-bottom: 64px;
+  background: #f6f9fc;
+  overflow: hidden;
+  .speaker-card {
+    width: 300px;
+    margin: 0 10px 32px 10px;
+    // @include flatShadow(box, #edf2f5, 600, true, true, left); //flat shadow
+    .speaker{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .photo-wrapper{
+        border-radius: 100%;
+        overflow: hidden;
+        height: 200px;
+        margin: 0 0 24px 0;
+      }
+      .speaker-text{
+        padding-left: 8px;
+        padding-right: 8px;
+        margin: 0 0 24px 0;
+        .name{
+          text-align: center;
+          margin: 0 0 8px 0;
+        }
+        .des{
+          text-align: center;
+          margin: 0 0 16px 0;
+        }
+        .about{
+          color: rgba(1,22,39,0.60);
+          text-align: center;
+          margin: 0px;
+        }
+      }
+      .speaker-socials{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        li {
+          width: 40px;
+          height: 40px;
+          padding: 8px;
+          border-radius: 100%;
+          background: transparent;
+          transition: all .2s ease-in-out;
+          &:hover{
+            background: #EDF2F5;
+            transition: all .2s ease-in-out;
+          }
+          > a {
+            display: flex;
+            > img{
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

@@ -8,7 +8,8 @@ import {
   MatIconModule,
   MatMenuModule,
   MatToolbarModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatDialogModule
 } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TranslateModule } from '@ngx-translate/core';
@@ -25,6 +26,7 @@ const materialModule = [
   MatCardModule,
   MatTooltipModule,
   MatSnackBarModule
+  MatDialogModule,
 ];
 
 @NgModule({

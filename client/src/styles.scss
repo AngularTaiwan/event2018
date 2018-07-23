@@ -80,7 +80,7 @@ $ngtw-theme: mat-light-theme($ngtw-primary, $ngtw-accent, $ngtw-warn);
   $length,
   $fadeout: true,
   $skew: false,
-  $direction: right
+  $direction: left
 ) {
   $shadow: '';
   @if $skew == false or $type == text {

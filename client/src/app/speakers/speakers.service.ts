@@ -3,7 +3,7 @@ import { ISpeaker } from './speaker';
 
 const SPEAKERS = [
   {
-    img: 'assets/img/speakers/speaker1.jpg',
+    img: 'assets/images/speakers/speaker1.jpg',
     name: 'ERIC BOLDY',
     title: 'Project Manager',
     about: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -13,7 +13,7 @@ const SPEAKERS = [
     github: '#'
   },
   {
-    img: 'assets/img/speakers/speaker1.jpg',
+    img: 'assets/images/speakers/speaker1.jpg',
     name: 'JAMES ROCK',
     title: 'VP Product @ Flopbox',
     about: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -23,7 +23,7 @@ const SPEAKERS = [
     github: '#'
   },
   {
-    img: 'assets/img/speakers/speaker1.jpg',
+    img: 'assets/images/speakers/speaker1.jpg',
     name: 'ANDREA WARRAETY',
     title: 'Designer @ Winstagrap',
     about: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -33,7 +33,7 @@ const SPEAKERS = [
     github: '#'
   },
   {
-    img: 'assets/img/speakers/speaker1.jpg',
+    img: 'assets/images/speakers/speaker1.jpg',
     name: 'MARTIN BRANSON',
     title: 'Evangelist @ Doogle',
     about: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -43,7 +43,7 @@ const SPEAKERS = [
     github: '#'
   },
   {
-    img: 'assets/img/speakers/speaker1.jpg',
+    img: 'assets/images/speakers/speaker1.jpg',
     name: 'AMY WARNER',
     title: 'Graphic Designer',
     about: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -53,7 +53,7 @@ const SPEAKERS = [
     github: '#'
   },
   {
-    img: 'assets/img/speakers/speaker1.jpg',
+    img: 'assets/images/speakers/speaker1.jpg',
     name: 'ALEC KROSOVIC',
     title: 'Project Manager',
     about: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
