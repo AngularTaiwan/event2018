@@ -1,0 +1,89 @@
+.section {
+  padding-top: 80px;
+  padding-bottom: 64px;
+  // background: #f6f9fc;
+  overflow: hidden;
+}
+
+::ng-deep.mat-tab-labels .mat-tab-label {
+  width: 50%;
+  font-family: NotoSansCJKtc-Regular;
+  font-size: 24px;
+  color: rgba(1, 22, 39, 0.87);
+  letter-spacing: 0.4px;
+  line-height: 28px;
+  &.mat-tab-label-active {
+    color: rgba(1, 22, 39, 0.87);
+  }
+  .event-date {
+    margin-left: 10px;
+    font-family: Sansation-Regular;
+    font-size: 20px;
+    color: rgba(1, 22, 39, 0.6);
+    letter-spacing: 0.25px;
+  }
+}
+.schedule {
+  list-style: none;
+  padding-top: 40px;
+  padding-left: 30px;
+  .schedule-item {
+    min-height: 150px;
+    .section-box {
+      display: flex;
+      font-family: Sansation-Regular;
+      font-size: 24px;
+      color: rgba(1, 22, 39, 0.87);
+      letter-spacing: 0.4px;
+      line-height: 28px;
+      .time-info {
+        border-right: 4px solid #edf2f5;
+        flex-basis: 50%;
+        text-align: right;
+        height: auto;
+        .time {
+          display: inline-block;
+          margin-top: 16px;
+          margin-right: -4px;
+          border-right: 4px solid #3f51b5;
+          padding-right: 30px;
+          height: 45px;
+          line-height: 2;
+        }
+      }
+      .section-detail {
+        padding: 25px 30px;
+        mat-card {
+          padding-right: 45px;
+        }
+        .section-title {
+          font-family: Sansation-Regular;
+          font-size: 20px;
+          color: rgba(1, 22, 39, 0.87);
+          letter-spacing: 0.4px;
+          line-height: 28px;
+          margin: 0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        .section-speaker {
+          font-family: Sansation-Regular;
+          font-size: 16px;
+          color: #3f51b5;
+          letter-spacing: 0.2px;
+          text-align: right;
+          line-height: 2;
+        }
+        .section-description {
+          margin-top: 16px;
+          font-family: Sansation-Light;
+          font-size: 14px;
+          color: rgba(1, 22, 39, 0.6);
+          letter-spacing: 0.25px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

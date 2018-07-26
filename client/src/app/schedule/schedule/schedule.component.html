@@ -1,369 +1,71 @@
-<section id="schedule" class="section schedule-section align-center">
+<section id="schedule" class="section align-center">
+  <h1 class="topic text-center">{{ 'Agenda' | translate }}</h1>
   <div class="container">
-    <span class="icon section-icon icon-office-21"></span>
-    <h3>活動議程</h3>
-    <br />
-    <br />
+    <div class="row justify-content-cneter justify-content-md-center">
+      <mat-tab-group class="col-12 col-sm-12 col-md-10">
 
-    <div class="col-md-10 col-md-offset-1">
+        <mat-tab>
+          <ng-template mat-tab-label class="col-12 col-sm-12 col-md-6">
+            專家演講
+            <span class="event-date">11/20 Tue</span>
+          </ng-template>
+          <ul class="schedule">
 
-      <!-- Schedule start -->
-      <div class="row schedule">
-
-        <!-- Navigation by day start -->
-        <ul class="nav nav-schedule">
-          <li class="active">
-            <a href="#schedule2_day1" data-toggle="tab">
-              <h5 class="highlight">Day 1</h5>
-              <p class="text-alt">11/24/2018</p>
-            </a>
-          </li>
-          <li>
-            <a href="#schedule2_day2" data-toggle="tab">
-              <h5 class="highlight">Day 2</h5>
-              <p class="text-alt">11/25/2018</p>
-            </a>
-          </li>
-        </ul>
-        <!-- Navigation by day end -->
-
-        <!-- First level content start -->
-        <div class="tab-content">
-
-          <!-- Day 1 content start -->
-          <div id="schedule2_day1" class="tab-pane fade active in">
-
-            <!-- Navigation by auditorium start -->
-            <ul class="nav nav-schedule">
-              <li class="active">
-                <a href="#schedule2_day1_auditorium1" data-toggle="tab">入門</a>
-              </li>
-              <li>
-                <a href="#schedule2_day1_auditorium2" data-toggle="tab">進階</a>
-              </li>
-            </ul>
-            <!-- Navigation by auditorium start -->
-
-            <!-- Second level content start -->
-            <div class="tab-content tab-content-schedule">
-
-              <!-- Auditorium 1 content start -->
-              <div id="schedule2_day1_auditorium1" class="tab-pane fade active in">
-
-                <!-- Accordion start -->
-                <div class="panel-group" id="schedule2_day1_auditorium1_timeline">
-
-                  <!-- Lecture start -->
-                  <div class="panel schedule-item">
-                    <div class="lecture-icon-wrapper">
-                      <span class="fa fa-cutlery"></span>
-                    </div>
-                    <a data-toggle="collapse" data-parent="#schedule2_day1_auditorium1_timeline" href="#schedule2_day1_auditorium1_time1"
-                      class="schedule-item-toggle">
-                      <strong class="time highlight">
-                        <span class="icon icon-office-24"></span>2:20 PM</strong>
-                      <h6 class="title">How to organize great events
-                        <i class="icon icon-arrows-06"></i>
-                      </h6>
-                    </a>
-                    <div id="schedule2_day1_auditorium1_time1" class="panel-collapse collapse in schedule-item-body">
-                      <article>
-                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                          Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                          an unknown printer took a galley of type and scrambled it to make a type.</p>
-                        <strong class="highlight speaker-name">Michael Lambert</strong>
-                      </article>
-                    </div>
-                  </div>
-                  <!-- Lecture end -->
-
-                  <!-- Lecture start -->
-                  <div class="panel schedule-item">
-                    <div class="lecture-icon-wrapper"></div>
-                    <a data-toggle="collapse" data-parent="#schedule2_day1_auditorium1_timeline" href="#schedule2_day1_auditorium1_time2"
-                      class="schedule-item-toggle collapsed">
-                      <strong class="time highlight">
-                        <span class="icon icon-office-24"></span>5:40 PM</strong>
-                      <h6 class="title">Scaling into crowded space
-                        <i class="icon icon-arrows-06"></i>
-                      </h6>
-                    </a>
-                    <div id="schedule2_day1_auditorium1_time2" class="panel-collapse collapse schedule-item-body">
-                      <article>
-                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                          Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                          an unknown printer took a galley of type and scrambled it to make a type.</p>
-                        <strong class="highlight speaker-name">Michael Lambert</strong>
-                      </article>
-                    </div>
-                  </div>
-                  <!-- Lecture end -->
-
-                  <!-- Lecture start -->
-                  <div class="panel schedule-item">
-                    <div class="lecture-icon-wrapper">
-                      <img src="../assets/img/speakers/speaker1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <a data-toggle="collapse" data-parent="#schedule2_day1_auditorium1_timeline" href="#schedule2_day1_auditorium1_time3"
-                      class="schedule-item-toggle collapsed">
-                      <strong class="time highlight">
-                        <span class="icon icon-office-24"></span>7:00 PM</strong>
-                      <h6 class="title">Close your eyes around the world
-                        <i class="icon icon-arrows-06"></i>
-                      </h6>
-                    </a>
-                    <div id="schedule2_day1_auditorium1_time3" class="panel-collapse collapse schedule-item-body">
-                      <article>
-                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                          Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                          an unknown printer took a galley of type and scrambled it to make a type.</p>
-                        <strong class="highlight speaker-name">Michael Lambert</strong>
-                      </article>
-                    </div>
-                  </div>
-                  <!-- Lecture end -->
-
-                  <!-- Lecture start -->
-                  <div class="panel schedule-item">
-                    <div class="lecture-icon-wrapper">
-                      <img src="../assets/img/speakers/speaker1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <a data-toggle="collapse" data-parent="#schedule2_day1_auditorium1_timeline" href="#schedule2_day1_auditorium1_time4"
-                      class="schedule-item-toggle collapsed">
-                      <strong class="time highlight">
-                        <span class="icon icon-office-24"></span>7:40 PM</strong>
-                      <h6 class="title">Passion and people
-                        <i class="icon icon-arrows-06"></i>
-                      </h6>
-                    </a>
-                    <div id="schedule2_day1_auditorium1_time4" class="panel-collapse collapse schedule-item-body">
-                      <article>
-                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                          Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                          an unknown printer took a galley of type and scrambled it to make a type.</p>
-                        <strong class="highlight speaker-name">Michael Lambert</strong>
-                      </article>
-                    </div>
-                  </div>
-                  <!-- Lecture end -->
-
+            <li class="schedule-item">
+              <div class="section-box">
+                <div class="time-info">
+                  <span class="time">09:00 - 10:30</span>
                 </div>
-                <!-- Accordion end -->
-
-              </div>
-              <!-- Auditorium 1 content end -->
-
-              <!-- Auditorium 2 content start -->
-              <div id="schedule2_day1_auditorium2" class="tab-pane fade in">
-
-                <!-- Accordion start -->
-                <div class="panel-group" id="schedule2_day1_auditorium2_timeline">
-
-                  <!-- Lecture start -->
-                  <div class="panel schedule-item">
-                    <div class="lecture-icon-wrapper">
-                      <img src="../assets/img/speakers/speaker1.jpg" alt="" class="img-responsive">
+                <div class="section-detail">
+                  <mat-card>
+                    <div class="row">
+                      <h2 class="section-title col-10">Angular reactive forms with useful operators</h2>
+                      <span class="section-speaker col-2">Jeff Wu</span>
                     </div>
-                    <a data-toggle="collapse" data-parent="#schedule2_day1_auditorium2_timeline" href="#schedule2_day1_auditorium2_time1"
-                      class="schedule-item-toggle">
-                      <strong class="time highlight">
-                        <span class="icon icon-office-24"></span>2:20 PM</strong>
-                      <h6 class="title">How to organize great events
-                        <i class="icon icon-arrows-06"></i>
-                      </h6>
-                    </a>
-                    <div id="schedule2_day1_auditorium2_time1" class="panel-collapse collapse in schedule-item-body">
-                      <article>
-                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                          Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                          an unknown printer took a galley of type and scrambled it to make a type.</p>
-                        <strong class="highlight speaker-name">Michael Lambert</strong>
-                      </article>
-                    </div>
-                  </div>
-                  <!-- Lecture end -->
-
-                  <!-- Lecture start -->
-                  <div class="panel schedule-item">
-                    <div class="lecture-icon-wrapper">
-                      <img src="../assets/img/speakers/speaker1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <a data-toggle="collapse" data-parent="#schedule2_day1_auditorium2_timeline" href="#schedule2_day1_auditorium2_time2"
-                      class="schedule-item-toggle collapsed">
-                      <strong class="time highlight">
-                        <span class="icon icon-office-24"></span>5:40 PM</strong>
-                      <h6 class="title">Scaling into crowded space
-                        <i class="icon icon-arrows-06"></i>
-                      </h6>
-                    </a>
-                    <div id="schedule2_day1_auditorium2_time2" class="panel-collapse collapse schedule-item-body">
-                      <article>
-                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                          Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                          an unknown printer took a galley of type and scrambled it to make a type.</p>
-                        <strong class="highlight speaker-name">Michael Lambert</strong>
-                      </article>
-                    </div>
-                  </div>
-                  <!-- Lecture end -->
-
+                    <mat-card-content>
+                      <p class="section-description">
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
+                        very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                      </p>
+                    </mat-card-content>
+                  </mat-card>
                 </div>
-                <!-- Accordion end -->
-
               </div>
-              <!-- Auditorium 2 content end -->
-            </div>
-            <!-- Second level content end -->
+            </li>
 
-          </div>
-          <!-- Day 1 content end -->
-
-          <!-- Day 2 content start -->
-          <div id="schedule2_day2" class="tab-pane fade in">
-
-            <!-- Navigation by auditorium start -->
-            <ul class="nav nav-schedule">
-              <li class="active">
-                <a href="#schedule2_day2_auditorium1" data-toggle="tab">入門</a>
-              </li>
-              <li>
-                <a href="#schedule2_day2_auditorium2" data-toggle="tab">進階</a>
-              </li>
-            </ul>
-            <!-- Navigation by auditorium end -->
-
-            <!-- Second level content start -->
-            <div class="tab-content tab-content-schedule">
-
-              <!-- Auditorium 1 content start -->
-              <div id="schedule2_day2_auditorium1" class="tab-pane fade active in">
-
-                <!-- Accordion start -->
-                <div class="panel-group" id="schedule2_day2_auditorium1_timeline">
-
-                  <!-- Lecture start -->
-                  <div class="panel schedule-item">
-                    <div class="lecture-icon-wrapper">
-                      <img src="../assets/img/speakers/speaker1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <a data-toggle="collapse" data-parent="#schedule2_day2_auditorium1_timeline" href="#schedule2_day2_auditorium1_time1"
-                      class="schedule-item-toggle">
-                      <strong class="time highlight">
-                        <span class="icon icon-office-24"></span>2:20 PM</strong>
-                      <h6 class="title">How to organize great events
-                        <i class="icon icon-arrows-06"></i>
-                      </h6>
-                    </a>
-                    <div id="schedule2_day2_auditorium1_time1" class="panel-collapse collapse in schedule-item-body">
-                      <article>
-                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                          Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                          an unknown printer took a galley of type and scrambled it to make a type.</p>
-                        <strong class="highlight speaker-name">Michael Lambert</strong>
-                      </article>
-                    </div>
-                  </div>
-                  <!-- Lecture end -->
-
-                  <!-- Lecture start -->
-                  <div class="panel schedule-item">
-                    <div class="lecture-icon-wrapper">
-                      <img src="../assets/img/speakers/speaker1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <a data-toggle="collapse" data-parent="#schedule2_day2_auditorium1_timeline" href="#schedule2_day2_auditorium1_time3"
-                      class="schedule-item-toggle collapsed">
-                      <strong class="time highlight">
-                        <span class="icon icon-office-24"></span>7:00 PM</strong>
-                      <h6 class="title">Close your eyes around the world
-                        <i class="icon icon-arrows-06"></i>
-                      </h6>
-                    </a>
-                    <div id="schedule2_day2_auditorium1_time3" class="panel-collapse collapse schedule-item-body">
-                      <article>
-                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                          Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                          an unknown printer took a galley of type and scrambled it to make a type.</p>
-                        <strong class="highlight speaker-name">Michael Lambert</strong>
-                      </article>
-                    </div>
-                  </div>
-                  <!-- Lecture end -->
-
-                  <!-- Lecture start -->
-                  <div class="panel schedule-item">
-                    <div class="lecture-icon-wrapper">
-                      <img src="../assets/img/speakers/speaker1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <a data-toggle="collapse" data-parent="#schedule2_day2_auditorium1_timeline" href="#schedule2_day2_auditorium1_time4"
-                      class="schedule-item-toggle collapsed">
-                      <strong class="time highlight">
-                        <span class="icon icon-office-24"></span>7:40 PM</strong>
-                      <h6 class="title">Passion and people
-                        <i class="icon icon-arrows-06"></i>
-                      </h6>
-                    </a>
-                    <div id="schedule2_day2_auditorium1_time4" class="panel-collapse collapse schedule-item-body">
-                      <article>
-                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                          Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                          an unknown printer took a galley of type and scrambled it to make a type.</p>
-                        <strong class="highlight speaker-name">Michael Lambert</strong>
-                      </article>
-                    </div>
-                  </div>
-                  <!-- Lecture end -->
-
+            <li class="schedule-item">
+              <div class="section-box">
+                <div class="time-info">
+                  <span class="time">09:00 - 10:30</span>
                 </div>
-                <!-- Accordion end -->
-
-              </div>
-              <!-- Auditorium 1 content end -->
-
-              <!-- Auditorium 2 content start -->
-              <div id="schedule2_day2_auditorium2" class="tab-pane fade in">
-
-                <!-- Accordion start -->
-                <div class="panel-group" id="schedule2_day2_auditorium2_timeline">
-
-                  <!-- Lecture start -->
-                  <div class="panel schedule-item">
-                    <div class="lecture-icon-wrapper">
-                      <img src="../assets/img/speakers/speaker1.jpg" alt="" class="img-responsive">
+                <div class="section-detail">
+                  <mat-card>
+                    <div class="row">
+                      <h2 class="section-title col-10">Angular reactive forms with useful operators</h2>
+                      <span class="section-speaker col-2">Jeff Wu</span>
                     </div>
-                    <a data-toggle="collapse" data-parent="#schedule2_day2_auditorium2_timeline" href="#schedule2_day2_auditorium2_time1"
-                      class="schedule-item-toggle">
-                      <strong class="time highlight">
-                        <span class="icon icon-office-24"></span>2:20 PM</strong>
-                      <h6 class="title">How to organize great events
-                        <i class="icon icon-arrows-06"></i>
-                      </h6>
-                    </a>
-                    <div id="schedule2_day2_auditorium2_time1" class="panel-collapse collapse in schedule-item-body">
-                      <article>
-                        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                          Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                          an unknown printer took a galley of type and scrambled it to make a type.</p>
-                        <strong class="highlight speaker-name">Michael Lambert</strong>
-                      </article>
-                    </div>
-                  </div>
-                  <!-- Lecture end -->
-
+                    <mat-card-content>
+                      <p class="section-description">
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
+                        very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                      </p>
+                    </mat-card-content>
+                  </mat-card>
                 </div>
-                <!-- Accordion end -->
-
               </div>
-              <!-- Auditorium 2 content end -->
-            </div>
-            <!-- Second level content end -->
+            </li>
+          </ul>
+        </mat-tab>
 
-          </div>
-          <!-- Day 2 content end -->
-        </div>
-        <!-- First level content end -->
+        <mat-tab>
+          <ng-template mat-tab-label class="col-12 col-sm-12 col-md-6">
+            工作坊
+            <span class="event-date">11/21 Sun</span>
+          </ng-template>
+          Content 2
+        </mat-tab>
 
-      </div>
-      <!-- Schedule end -->
+      </mat-tab-group>
     </div>
   </div>
 </section>
