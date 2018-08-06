@@ -4,6 +4,9 @@
   "ticket": "票種",
   "location": "地點",
   "collaborative": "共筆",
+  "speakers": {
+    "info": "講者資訊 Coming Soon"
+  },
   "tickets": {
     "speaker": "專家演講",
     "workshop": "工作坊",

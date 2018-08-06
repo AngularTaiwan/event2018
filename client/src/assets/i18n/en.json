@@ -4,6 +4,9 @@
   "ticket": "PRICE",
   "location": "LOCATION",
   "collaborative": "COLLABORATIVE",
+  "speakers": {
+    "info": "Speaker Info Coming Soon"
+  },
   "tickets": {
     "speaker": "SESSIONS",
     "workshop": "WORKSHOPS",

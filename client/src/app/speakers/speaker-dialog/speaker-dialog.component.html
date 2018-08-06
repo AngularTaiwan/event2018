@@ -1,23 +1,35 @@
 <section id="speakers-modal" class="section align-center">
   <div class="thumb-link col-md-4">
     <div class="photo-wrapper">
-      <img src="assets/images/speakers/speaker1.jpg" alt="John Doe" class="img-responsive">
+      <img [src]="speaker.img" alt="John Doe" class="img-responsive">
     </div>
     <div class="speaker-link">
-        <button class="speaker-link col-md-12" mat-stroked-button color="primary">Primary</button>
-        <button class="speaker-link col-md-12" mat-stroked-button color="primary">Primary</button>
-        <button class="speaker-link col-md-12" mat-stroked-button color="primary">Primary</button>
+      <button class="speaker-link col-md-12" mat-stroked-button color="primary">Primary</button>
+      <button class="speaker-link col-md-12" mat-stroked-button color="primary">Primary</button>
+      <button class="speaker-link col-md-12" mat-stroked-button color="primary">Primary</button>
     </div>
   </div>
   <div class="speaker-info col-md-8">
-    <h2>speaker name</h2>
-    <ul>
-      <li>title-one</li>
-      <li>title-two</li>
-      <li>title-three</li>
-    </ul>
+    <h2>{{ speaker.name }}</h2>
     <p class="description col-md-12">
-      here is description...
+      {{ speaker.about }}
     </p>
+    <ul class="speaker-socials">
+      <li *ngIf="speaker.fb">
+        <a [href]="speaker.fb">
+          <img src="../assets/images/facebook.svg" />
+        </a>
+      </li>
+      <li *ngIf="speaker.twitter">
+        <a [href]="speaker.twitter">
+          <img src="../assets/images/twitter.svg" />
+        </a>
+      </li>
+      <li *ngIf="speaker.github">
+        <a [href]="speaker.github">
+          <img src="../assets/images/github.svg" />
+        </a>
+      </li>
+    </ul>
   </div>
 </section>

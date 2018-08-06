@@ -17,13 +17,15 @@ export class SpeakersComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.speakers = this.speakerService.speakers();
+    this.speakers = this.speakerService
+      .speakers()
+      .filter(s => s.hide === false);
   }
 
-  openDialog(): void {
+  openDialog(speker): void {
     const dialogRef = this.dialog.open(SpeakerDialogComponent, {
       width: '740px',
-      data: { name: 'SampleName', animal: 'Animal' }
+      data: { speaker: speker }
     });
 
     dialogRef.afterClosed().subscribe(result => {

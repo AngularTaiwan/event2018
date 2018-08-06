@@ -5,37 +5,42 @@
   </p> -->
   <div class="container">
     <div class="row d-flex justify-content-center">
-      <mat-card class="speaker-card" *ngFor="let speaker of speakers;let i = index;" (click)="openDialog()">
-        <div class="speaker">
-          <div class="photo-wrapper">
-            <img [src]="speaker.img" alt="John Doe" class="img-responsive">
+      <div *ngIf="speakers.length>0; else comingsoon">
+        <mat-card class="speaker-card" *ngFor="let speaker of speakers">
+          <div class="speaker">
+            <div class="photo-wrapper">
+              <img [src]="speaker.img" alt="John Doe" class="img-responsive">
+            </div>
+            <div class="speaker-text">
+              <h3 class="name">{{ speaker.name }}</h3>
+              <p class="des text-alt">
+                <small>{{ speaker.title }}</small>
+              </p>
+              <p class="about">{{ speaker.about }}</p>
+            </div>
+            <ul class="speaker-socials">
+              <li *ngIf="speaker.fb">
+                <a [href]="speaker.fb">
+                  <img src="../assets/images/facebook.svg" />
+                </a>
+              </li>
+              <li *ngIf="speaker.twitter">
+                <a [href]="speaker.twitter">
+                  <img src="../assets/images/twitter.svg" />
+                </a>
+              </li>
+              <li *ngIf="speaker.github">
+                <a [href]="speaker.github">
+                  <img src="../assets/images/github.svg" />
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="speaker-text">
-            <h3 class="name">{{ speaker.name }}</h3>
-            <p class="des text-alt">
-              <small>{{ speaker.title }}</small>
-            </p>
-            <p class="about">{{ speaker.about }}</p>
-          </div>
-          <ul class="speaker-socials">
-            <li *ngIf="speaker.fb">
-              <a [href]="speaker.fb">
-                <img src="../assets/images/facebook.svg" />
-              </a>
-            </li>
-            <li *ngIf="speaker.twitter">
-              <a [href]="speaker.twitter">
-                <img src="../assets/images/twitter.svg" />
-              </a>
-            </li>
-            <li *ngIf="speaker.github">
-              <a [href]="speaker.github">
-                <img src="../assets/images/github.svg" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </mat-card>
+        </mat-card>
+      </div>
+      <ng-template #comingsoon>
+        <h2>~ {{ 'speakers.info' | translate }} ~</h2>
+      </ng-template>
     </div>
   </div>
 </section>

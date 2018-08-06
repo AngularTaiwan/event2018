@@ -7,36 +7,37 @@
   .speaker-card {
     width: 300px;
     margin: 0 10px 32px 10px;
+
     // @include flatShadow(box, #edf2f5, 600, true, true, left); //flat shadow
-    .speaker{
+    .speaker {
       display: flex;
       flex-direction: column;
       align-items: center;
-      .photo-wrapper{
+      .photo-wrapper {
         border-radius: 100%;
         overflow: hidden;
         height: 200px;
         margin: 0 0 24px 0;
       }
-      .speaker-text{
+      .speaker-text {
         padding-left: 8px;
         padding-right: 8px;
         margin: 0 0 24px 0;
-        .name{
+        .name {
           text-align: center;
           margin: 0 0 8px 0;
         }
-        .des{
+        .des {
           text-align: center;
           margin: 0 0 16px 0;
         }
-        .about{
-          color: rgba(1,22,39,0.60);
+        .about {
+          color: rgba(1, 22, 39, 0.6);
           text-align: center;
           margin: 0px;
         }
       }
-      .speaker-socials{
+      .speaker-socials {
         list-style: none;
         display: flex;
         flex-direction: row;
@@ -49,18 +50,17 @@
           padding: 8px;
           border-radius: 100%;
           background: transparent;
-          transition: all .2s ease-in-out;
-          &:hover{
-            background: #EDF2F5;
-            transition: all .2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            background: #edf2f5;
+            transition: all 0.2s ease-in-out;
           }
           > a {
             display: flex;
-            > img{
+            > img {
             }
           }
         }
-
       }
     }
   }

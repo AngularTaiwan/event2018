@@ -11,7 +11,9 @@ export class SpeakerDialogComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<SpeakerDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-  ) {}
+  ) {
+    this.speaker = data.speaker;
+  }
   ngOnInit() {}
   onNoClick(): void {
     this.dialogRef.close();
