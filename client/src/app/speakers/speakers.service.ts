@@ -33,6 +33,20 @@ const SPEAKERS = [
     fb: '',
     twitter: 'https://twitter.com/ladyleet',
     github: ''
+  },
+  {
+    img: 'assets/images/speakers/Jecelyn.jpg',
+    name: 'Jecelyn Yeen',
+    title: 'Software Architect',
+    // tslint:disable-next-line:max-line-length
+    about: `Jecelyn speaks in several languages, including Mandarin, English, Javascript, C#, and HTML. Web development ninja by nature, Randstad's software architect by profession – she has been a practitioner of clean coding for 10 years. <br/><br/>
+    She enjoy building lovable and scalable products that used by millions. When she’s not coding, she’s jumping into mysterious sea waters in search of narwhals and mermaids.
+    <br/><br/>
+    Jecelyn is an Angular GDE, she also co-founded Women Who Code Kuala Lumpur and The Frontend Malaysia.`,
+    hide: true,
+    fb: '',
+    twitter: 'https://twitter.com/JecelynYeen',
+    github: ''
   }
 ];
 
