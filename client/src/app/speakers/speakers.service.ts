@@ -37,7 +37,6 @@ const SPEAKERS = [
     twitter: 'https://twitter.com/chgc',
     github: 'http://github.com/chgc'
   },
-
   {
     img: 'assets/images/speakers/Jecelyn.jpg',
     name: 'Jecelyn Yeen',
@@ -53,6 +52,26 @@ const SPEAKERS = [
     hide: false,
     fb: 'https://www.facebook.com/jecelyn',
     twitter: 'https://twitter.com/JecelynYeen',
+    github: ''
+  },
+  {
+    img: 'assets/images/speakers/poy.jpg',
+    name: 'Poy Chang',
+    company: '',
+    title: 'Senior Enginner',
+    // tslint:disable-next-line:max-line-length
+    about: `目前任職於全美前 100 大私人企業，負責企業內部 IT 解決方案設計與開發，從前端開發到後端系統構建的過程中累積多元技術經驗，喜歡將經驗發表於 <a href="https://poychang.github.io" target="_blank">https://poychang.github.io</a> 個人部落格，分享各項技術實務。
+    <br/><br/>
+    講師經歷
+    <ul>
+      <li>微軟 MVP 最有價專家</li>
+      <li>Angular Taiwan 核心社群成員</li>
+      <li>Global Azure Bootcamp 講師</li>
+    </ul>
+    `,
+    hide: false,
+    fb: 'https://www.facebook.com/poychang',
+    twitter: 'https://twitter.com/poychang',
     github: ''
   }
 ];
