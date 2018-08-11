@@ -55,6 +55,19 @@ const SPEAKERS = [
     github: ''
   },
   {
+    img: 'assets/images/speakers/mike.jpg',
+    name: 'Mike Huang',
+    company: '多奇數位創意有限公司',
+    title: '老司機',
+    // tslint:disable-next-line:max-line-length
+    about: `現任多奇數位創意有限公司全端工程師，2018 年以「Angular Material 完全攻略」系列文章榮獲 2018 iT 邦幫忙鐵人賽 Modern Web 組 冠軍，熟悉 .NET 與 Angular 相關技術，熱衷各式新奇技術研究與分享學習經驗。
+    `,
+    hide: false,
+    fb: 'https://www.facebook.com/fullstackledder/',
+    twitter: '',
+    github: 'https://github.com/wellwind'
+  },
+  {
     img: 'assets/images/speakers/poy.jpg',
     name: 'Poy Chang',
     company: '',
