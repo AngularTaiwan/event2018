@@ -27,7 +27,7 @@ const SPEAKERS = [
     github: ''
   },
   {
-    img: 'assets/images/speakers/kevin.png',
+    img: 'assets/images/speakers/kevin.jpg',
     name: 'Kevin Yang',
     company: 'Angular Taiwan ',
     title: '技術傳教士',
