@@ -86,6 +86,33 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/poychang',
     twitter: 'https://twitter.com/poychang',
     github: ''
+  },
+  {
+    img: 'assets/images/speakers/james.jpg',
+    name: 'James Fu',
+    company: '鼎新電腦新創事業處',
+    title: '經理',
+    // tslint:disable-next-line:max-line-length
+    about: `主要專長在系統架構設計、資料庫效能調教等實作經驗。
+    在 Study4.TW 社群擔任講師，推廣 SQL Server 與 Hyper-V 相關技術，
+    具 MCSE 國際認證執照，獲選為微軟最有價值專家（MVP）。
+    <br/><br/>
+    講師經歷
+    <ul>
+      <li>微軟 Data Platform MVP (2013/04~ )</li>
+      <li>Study4.TW 常任講師</li>
+      <li>SQL Pass 常任講師</li>
+      <li>微軟 MVA 課程講師</li>
+      <li>擁有 MCP , MCP+I , MCSE , MCSE+I, MCDBA, MCTS, MCSA, SCJP, OCP</li>
+      <li>擁有 SQL Server 2012 MCSE</li>
+      <li>微軟虛擬化戰士 第一屆 和 第三屆 金翅級 證書</li>
+      <li>微軟 TechDay 講師</li>
+    </ul>
+    `,
+    hide: true,
+    fb: '',
+    twitter: '',
+    github: ''
   }
 ];
 
