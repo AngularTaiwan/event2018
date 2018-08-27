@@ -123,4 +123,21 @@ export class SpeakersService {
   speakers(): ISpeaker[] {
     return this._speakers;
   }
+
+  initEmptySpeakerArray(): ISpeaker[] {
+    const speakerCount = 8;
+    const emptySpeaker = {
+      img: 'assets/images/speakers/speaker2.jpg',
+      name: '',
+      company: '',
+      title: '',
+      // tslint:disable-next-line:max-line-length
+      about: 'Coming Soon',
+      hide: false,
+      fb: '',
+      twitter: '',
+      github: ''
+    };
+    return Array.from({ length: speakerCount }, (v, k) => emptySpeaker);
+  }
 }

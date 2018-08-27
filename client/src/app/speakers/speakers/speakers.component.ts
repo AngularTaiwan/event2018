@@ -17,9 +17,10 @@ export class SpeakersComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.speakers = this.speakerService
-      .speakers()
-      .filter(s => s.hide === false);
+    this.speakers = [
+      ...this.speakerService.speakers().filter(s => s.hide === false),
+      ...this.speakerService.initEmptySpeakerArray()
+    ].slice(0, 8);
   }
 
   openDialog(speker): void {
