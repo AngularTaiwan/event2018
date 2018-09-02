@@ -32,6 +32,11 @@
                 <img src="../assets/images/github.svg" />
               </a>
             </li>
+            <li *ngIf="speaker.website">
+              <a [href]="speaker.website">
+                <img src="../assets/images/web.svg" />
+              </a>
+            </li>
           </ul>
         </div>
       </mat-card>
