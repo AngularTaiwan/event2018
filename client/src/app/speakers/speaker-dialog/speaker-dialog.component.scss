@@ -1,20 +1,35 @@
 .section {
-  width: 740px;
+  max-width: 720px;
+  max-height: 70vh;
   display: flex;
   flex-direction: row;
   align-items: start;
+  @media screen and (max-width: 720px) {
+    flex-wrap: wrap;
+  }
   .thumb-link {
     .photo-wrapper {
-      border-radius: 100%;
       overflow: hidden;
-      height: 200px;
       margin: 0 0 24px 0;
+      background: tomato;
+      margin: 5px;
+      color: white;
+      flex: 1 0 auto;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      &::before {
+        content: "";
+        float: left;
+        padding-top: 100%;
+      }
       img {
         width: 100%;
+        transform: scale(1.1);
       }
     }
-    .speaker-link {
-      margin-bottom: 10px;
-    }
+  }
+  .speaker-link {
+    text-align: center;
+    margin: 5px auto;
   }
 }

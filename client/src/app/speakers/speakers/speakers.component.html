@@ -4,10 +4,10 @@
     <div class="row d-flex justify-content-center" *ngIf="speakers.length>0; else comingsoon">
       <mat-card class="speaker-card" *ngFor="let speaker of speakers">
         <div class="speaker">
-          <div class="photo-wrapper">
+          <div class="photo-wrapper" (click)="openDialog(speaker)">
             <img [src]="speaker.img" alt="John Doe" class="img-responsive">
           </div>
-          <div class="speaker-text">
+          <div class="speaker-text" (click)="openDialog(speaker)">
             <h3 class="name">{{ speaker.name }}</h3>
             <p class="des text-alt">
               <small>{{speaker.company}}</small>

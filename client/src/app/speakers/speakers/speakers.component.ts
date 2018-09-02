@@ -25,7 +25,7 @@ export class SpeakersComponent implements OnInit {
 
   openDialog(speker): void {
     const dialogRef = this.dialog.open(SpeakerDialogComponent, {
-      width: '740px',
+      // width: '740px',
       data: { speaker: speker }
     });
 
