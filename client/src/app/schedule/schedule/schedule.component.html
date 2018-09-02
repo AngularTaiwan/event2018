@@ -11,9 +11,12 @@
             </div>
             <div class="section-detail">
               <mat-card>
-                <div class="row">
-                  <h2 class="section-title col-10">{{ session.topic }}</h2>
-                  <span class="section-speaker col-2">{{ session.speaker }}</span>
+                <div class="row" *ngIf="session.speaker">
+                  <h2 class="section-title col-9">{{ session.topic }}</h2>
+                  <span class="section-speaker col-3">{{ session.speaker }}</span>
+                </div>
+                <div class="row" *ngIf="!session.speaker">
+                  <h2 class="section-title col-12">{{ session.topic }}</h2>
                 </div>
                 <mat-card-content *ngIf="session.description">
                   <p class="section-description" [innerHTML]="session.description">

@@ -38,7 +38,7 @@
       line-height: 28px;
       .time-info {
         border-right: 4px solid #edf2f5;
-        flex-basis: 50%;
+        width: 20%;
         text-align: right;
         height: auto;
         .time {
@@ -53,6 +53,7 @@
       }
       .section-detail {
         padding: 25px 30px;
+        width: 80%;
         mat-card {
           padding-right: 45px;
         }
@@ -74,6 +75,7 @@
           letter-spacing: 0.2px;
           text-align: right;
           line-height: 2;
+          white-space: nowrap;
         }
         .section-description {
           margin-top: 16px;
