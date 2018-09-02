@@ -4,13 +4,13 @@
       <img [src]="speaker.img" alt="John Doe" class="img-responsive">
     </div>
     <div class="speaker-link d-none d-sm-block">
-      <a class="speaker-link col-md-12" [href]="speaker.fb" mat-stroked-button color="primary">
+      <a class="speaker-link col-md-12" *ngIf="speaker.fb" [href]="speaker.fb" mat-stroked-button color="primary">
         <img src="../assets/images/facebook.svg" /> Facebook
       </a>
-      <a class="speaker-link col-md-12" [href]="speaker.twitter" mat-stroked-button color="primary">
+      <a class="speaker-link col-md-12" *ngIf="speaker.twitter" [href]="speaker.twitter" mat-stroked-button color="primary">
         <img src="../assets/images/twitter.svg" /> Twitter
       </a>
-      <a class="speaker-link col-md-12" [href]="speaker.github" mat-stroked-button color="primary">
+      <a class="speaker-link col-md-12" *ngIf="speaker.github" [href]="speaker.github" mat-stroked-button color="primary">
         <img src="../assets/images/github.svg" /> Github
       </a>
     </div>
@@ -21,13 +21,13 @@
     </p>
   </div>
   <div class="speaker-link d-sm-none">
-    <a class="speaker-link col-md-12" [href]="speaker.fb" mat-stroked-button color="primary">
+    <a class="speaker-link col-md-12" *ngIf="speaker.fb" [href]="speaker.fb" mat-stroked-button color="primary">
       <img src="../assets/images/facebook.svg" /> Facebook
     </a>
-    <a class="speaker-link col-md-12" [href]="speaker.twitter" mat-stroked-button color="primary">
+    <a class="speaker-link col-md-12" *ngIf="speaker.twitter" [href]="speaker.twitter" mat-stroked-button color="primary">
       <img src="../assets/images/twitter.svg" /> Twitter
     </a>
-    <a class="speaker-link col-md-12" [href]="speaker.github" mat-stroked-button color="primary">
+    <a class="speaker-link col-md-12" *ngIf="speaker.github" [href]="speaker.github" mat-stroked-button color="primary">
       <img src="../assets/images/github.svg" /> Github
     </a>
   </div>

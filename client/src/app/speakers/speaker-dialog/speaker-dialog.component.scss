@@ -28,8 +28,22 @@
       }
     }
   }
+  .speaker-info {
+    font-family: Sansation-Regular;
+    font-size: 16px;
+    color: rgba(1, 22, 39, 0.6);
+    letter-spacing: 0.4px;
+    line-height: 22px;
+    .description {
+      padding: 0;
+    }
+  }
   .speaker-link {
     text-align: center;
     margin: 5px auto;
   }
+}
+
+:host ::ng-deep .mat-dialog-container{
+  border-radius: 5px;
 }
