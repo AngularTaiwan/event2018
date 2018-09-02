@@ -13,43 +13,43 @@ html {
   box-sizing: inherit;
 }
 // Boostrap
-@import 'node_modules/bootstrap/scss/functions';
-@import 'node_modules/bootstrap/scss/variables';
-@import 'node_modules/bootstrap/scss/mixins';
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
 
-@import 'node_modules/bootstrap/scss/grid';
-@import 'node_modules/bootstrap/scss/utilities';
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/utilities";
 
 //Material
-@import 'node_modules/@angular/material/theming';
+@import "node_modules/@angular/material/theming";
 // Plus imports for other components in your app.
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 @font-face {
-  font-family: 'Sansation-Light';
+  font-family: "Sansation-Light";
   src: url(/assets/fonts/sansation/Sansation_Light.eot?#iefix)
-      format('embedded-opentype'),
-    url(/assets/fonts/sansation/Sansation_Light.woff) format('woff'),
-    url(/assets/fonts/sansation/Sansation_Light.ttf) format('truetype');
+      format("embedded-opentype"),
+    url(/assets/fonts/sansation/Sansation_Light.woff) format("woff"),
+    url(/assets/fonts/sansation/Sansation_Light.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Sansation-Regular';
+  font-family: "Sansation-Regular";
   src: url(/assets/fonts/sansation/Sansation_Regular.eot?#iefix)
-      format('embedded-opentype'),
-    url(/assets/fonts/sansation/Sansation_Regular.ttf) format('truetype'),
-    url(/assets/fonts/sansation/Sansation_Regular.woff) format('woff');
+      format("embedded-opentype"),
+    url(/assets/fonts/sansation/Sansation_Regular.ttf) format("truetype"),
+    url(/assets/fonts/sansation/Sansation_Regular.woff) format("woff");
 }
 @font-face {
-  font-family: 'Sansation-Bold';
+  font-family: "Sansation-Bold";
   src: url(/assets/fonts/sansation/Sansation_Bold.eot?#iefix)
-      format('embedded-opentype'),
-    url(/assets/fonts/sansation/Sansation_Bold.ttf) format('truetype'),
-    url(/assets/fonts/sansation/Sansation_Bold.woff) format('woff');
+      format("embedded-opentype"),
+    url(/assets/fonts/sansation/Sansation_Bold.ttf) format("truetype"),
+    url(/assets/fonts/sansation/Sansation_Bold.woff) format("woff");
 }
 
-$default-font-familys: 'Noto Sans TC', 'Helvetica Neue', sans-serif;
+$default-font-familys: "Noto Sans TC", "Helvetica Neue", sans-serif;
 $ngtw-typography: mat-typography-config(
-  quote(join('Sansation-Regular', $default-font-familys))
+  quote(join("Sansation-Regular", $default-font-familys))
 );
 
 @include mat-core($ngtw-typography);
@@ -63,7 +63,7 @@ $ngtw-theme: mat-light-theme($ngtw-primary, $ngtw-accent, $ngtw-warn);
 @include angular-material-theme($ngtw-theme);
 
 .topic {
-  font-family: Sansation-Regular;
+  font-family: "Sansation-Regular", "Noto Sans TC", "Helvetica Neue", sans-serif;
   font-size: 48px;
   color: rgba(0, 0, 0, 0.87);
   letter-spacing: -0.4px;
@@ -82,16 +82,16 @@ $ngtw-theme: mat-light-theme($ngtw-primary, $ngtw-accent, $ngtw-warn);
   $skew: false,
   $direction: left
 ) {
-  $shadow: '';
+  $shadow: "";
   @if $skew == false or $type == text {
     @if $direction == right {
       @for $i from 0 to $length - 1 {
-        $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $color + ',';
+        $shadow: $shadow + $i + "px " + $i + "px 0 " + $color + ",";
       }
     }
     @if $direction == left {
       @for $i from 0 to $length - 1 {
-        $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $color + ',';
+        $shadow: $shadow + $i * -1 + "px " + $i + "px 0 " + $color + ",";
       }
     }
   }
@@ -101,75 +101,75 @@ $ngtw-theme: mat-light-theme($ngtw-primary, $ngtw-accent, $ngtw-warn);
         @if $direction == right {
           $shadow: $shadow +
             $i +
-            'px ' +
+            "px " +
             $i +
-            'px 0 ' +
+            "px 0 " +
             rgba($color, 1 - $i / $length) +
-            ',';
+            ",";
         }
         @if $direction == left {
           $shadow: $shadow +
             $i *
             -1 +
-            'px ' +
+            "px " +
             $i +
-            'px 0 ' +
+            "px 0 " +
             rgba($color, 1 - $i / $length) +
-            ',';
+            ",";
         }
       }
       @if ($type == box) and $skew == true {
         @if $direction == right {
           $shadow: $shadow +
             $i +
-            'px ' +
+            "px " +
             $i +
-            'px 0 ' +
+            "px 0 " +
             $i *
             0.2 +
-            'px ' +
+            "px " +
             rgba($color, 1 - $i / $length) +
-            ',';
+            ",";
         }
         @if $direction == left {
           $shadow: $shadow +
             $i *
             -1 +
-            'px ' +
+            "px " +
             $i +
-            'px 0 ' +
+            "px 0 " +
             $i *
             0.2 +
-            'px ' +
+            "px " +
             rgba($color, 1 - $i / $length) +
-            ',';
+            ",";
         }
       }
     }
-    $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba($color, 0);
+    $shadow: $shadow + $length + "px " + $length + "px 0 " + rgba($color, 0);
   }
   @if $fadeout == false {
     @if $skew == true and ($type == box) {
       @for $i from 0 to $length - 1 {
         $shadow: $shadow +
           $i +
-          'px ' +
+          "px " +
           $i +
-          'px 0 ' +
+          "px 0 " +
           $i *
           0.1 +
-          'px ' +
+          "px " +
           $color +
-          ',';
+          ",";
       }
     }
-    $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba(0, 0, 0, 0);
+    $shadow: $shadow + $length + "px " + $length + "px 0 " + rgba(0, 0, 0, 0);
   }
   $shadow: unquote($shadow);
-  @if $type == 'box' {
+  @if $type == "box" {
     box-shadow: $shadow;
   }
-  @if $type == 'text' {
+  @if $type == "text" {
     text-shadow: $shadow;
   }
 }

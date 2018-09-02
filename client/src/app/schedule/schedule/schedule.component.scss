@@ -9,11 +9,11 @@
   width: 50%;
   font-family: NotoSansCJKtc-Regular;
   font-size: 24px;
-  color: rgba(1, 22, 39, 0.87);
+  color: rgba(1, 22, 39, 0.7);
   letter-spacing: 0.4px;
   line-height: 28px;
   &.mat-tab-label-active {
-    color: rgba(1, 22, 39, 0.87);
+    color: rgba(1, 22, 39, 0.7);
   }
   .event-date {
     margin-left: 10px;
@@ -38,9 +38,10 @@
     }
     .section-box {
       display: flex;
-      font-family: Sansation-Regular;
+      font-family: "Sansation-Regular", "Noto Sans TC", "Helvetica Neue",
+        sans-serif;
       font-size: 24px;
-      color: rgba(1, 22, 39, 0.87);
+      color: rgba(1, 22, 39, 0.7);
       letter-spacing: 0.4px;
       line-height: 28px;
       @media screen and (max-width: 720px) {
@@ -87,9 +88,10 @@
           margin: 10px 0;
         }
         .section-title {
-          font-family: Sansation-Regular;
+          font-family: "Sansation-Regular", "Noto Sans TC", "Helvetica Neue",
+            sans-serif;
           font-size: 20px;
-          color: rgba(1, 22, 39, 0.87);
+          color: rgba(1, 22, 39, 0.7);
           letter-spacing: 0.4px;
           line-height: 28px;
           margin: 0;
@@ -102,7 +104,8 @@
           }
         }
         .section-speaker {
-          font-family: Sansation-Regular;
+          font-family: "Sansation-Regular", "Noto Sans TC", "Helvetica Neue",
+            sans-serif;
           font-size: 16px;
           color: #3f51b5;
           letter-spacing: 0.2px;
@@ -112,9 +115,10 @@
         }
         .section-description {
           margin-top: 16px;
-          font-family: Sansation-Light;
+          font-family: "Sansation-Regular", "Noto Sans TC", "Helvetica Neue",
+            sans-serif;
           font-size: 14px;
-          color: rgba(1, 22, 39, 0.6);
+          color: rgba(1, 22, 39, 1);
           letter-spacing: 0.25px;
           line-height: 20px;
         }
