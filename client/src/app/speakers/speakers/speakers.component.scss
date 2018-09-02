@@ -7,7 +7,7 @@
   .speaker-card {
     width: 300px;
     margin: 0 10px 32px 10px;
-
+    cursor: pointer;
     // @include flatShadow(box, #edf2f5, 600, true, true, left); //flat shadow
     .speaker {
       display: flex;
@@ -23,6 +23,8 @@
         padding-left: 8px;
         padding-right: 8px;
         margin: 0 0 24px 0;
+        max-height: 260px;
+        overflow: hidden;
         .name {
           text-align: center;
           margin: 0 0 8px 0;

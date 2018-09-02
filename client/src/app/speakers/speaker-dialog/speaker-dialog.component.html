@@ -1,35 +1,34 @@
 <section id="speakers-modal" class="section align-center">
-  <div class="thumb-link col-md-4">
+  <div class="thumb-link col-12 col-sm-5 col-md-4">
     <div class="photo-wrapper">
       <img [src]="speaker.img" alt="John Doe" class="img-responsive">
     </div>
-    <div class="speaker-link">
-      <button class="speaker-link col-md-12" mat-stroked-button color="primary">Primary</button>
-      <button class="speaker-link col-md-12" mat-stroked-button color="primary">Primary</button>
-      <button class="speaker-link col-md-12" mat-stroked-button color="primary">Primary</button>
+    <div class="d-none d-sm-block">
+      <a class="speaker-link col-md-12" *ngIf="speaker.fb" [href]="speaker.fb" mat-stroked-button color="primary">
+        <img class="svg-icon" src="../assets/images/facebook.svg" /> Facebook
+      </a>
+      <a class="speaker-link col-md-12" *ngIf="speaker.twitter" [href]="speaker.twitter" mat-stroked-button color="primary">
+        <img class="svg-icon" src="../assets/images/twitter.svg" /> Twitter
+      </a>
+      <a class="speaker-link col-md-12" *ngIf="speaker.github" [href]="speaker.github" mat-stroked-button color="primary">
+        <img class="svg-icon" src="../assets/images/github.svg" /> Github
+      </a>
     </div>
   </div>
-  <div class="speaker-info col-md-8">
+  <div class="speaker-info col-12 col-sm-7 col-md-8">
     <h2>{{ speaker.name }}</h2>
-    <p class="description col-md-12">
-      {{ speaker.about }}
+    <p class="description col-md-12" [innerHTML]="speaker.about | safe: 'html'">
     </p>
-    <ul class="speaker-socials">
-      <li *ngIf="speaker.fb">
-        <a [href]="speaker.fb">
-          <img src="../assets/images/facebook.svg" />
-        </a>
-      </li>
-      <li *ngIf="speaker.twitter">
-        <a [href]="speaker.twitter">
-          <img src="../assets/images/twitter.svg" />
-        </a>
-      </li>
-      <li *ngIf="speaker.github">
-        <a [href]="speaker.github">
-          <img src="../assets/images/github.svg" />
-        </a>
-      </li>
-    </ul>
+  </div>
+  <div class="d-sm-none">
+    <a class="speaker-link col-md-12" *ngIf="speaker.fb" [href]="speaker.fb" mat-stroked-button color="primary">
+      <img class="svg-icon" src="../assets/images/facebook.svg" /> Facebook
+    </a>
+    <a class="speaker-link col-md-12" *ngIf="speaker.twitter" [href]="speaker.twitter" mat-stroked-button color="primary">
+      <img class="svg-icon" src="../assets/images/twitter.svg" /> Twitter
+    </a>
+    <a class="speaker-link col-md-12" *ngIf="speaker.github" [href]="speaker.github" mat-stroked-button color="primary">
+      <img class="svg-icon" src="../assets/images/github.svg" /> Github
+    </a>
   </div>
 </section>

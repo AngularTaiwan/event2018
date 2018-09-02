@@ -8,4 +8,5 @@ export interface ISpeaker {
   fb?: string;
   twitter?: string;
   github?: string;
+  website?: string;
 }
