@@ -27,8 +27,15 @@
   list-style: none;
   padding-top: 40px;
   padding-left: 30px;
+  @media screen and (max-width: 720px) {
+    padding-top: 0;
+    padding-left: 15px;
+  }
   .schedule-item {
     min-height: 150px;
+    @media screen and (max-width: 720px) {
+      margin-bottom: 20px;
+    }
     .section-box {
       display: flex;
       font-family: Sansation-Regular;
@@ -36,11 +43,20 @@
       color: rgba(1, 22, 39, 0.87);
       letter-spacing: 0.4px;
       line-height: 28px;
+      @media screen and (max-width: 720px) {
+        flex-wrap: wrap;
+      }
       .time-info {
         border-right: 4px solid #edf2f5;
         width: 20%;
         text-align: right;
         height: auto;
+        @media screen and (max-width: 720px) {
+          width: 100%;
+          text-align: left;
+          border-right: none;
+          border-left: 4px solid #edf2f5;
+        }
         .time {
           display: inline-block;
           margin-top: 16px;
@@ -49,6 +65,14 @@
           padding-right: 30px;
           height: 45px;
           line-height: 2;
+          @media screen and (max-width: 720px) {
+            margin-right: 0;
+            margin-left: -4px;
+            padding-left: 15px;
+            border-left: 4px solid #3f51b5;
+            border-right: none;
+            display: block;
+          }
         }
       }
       .section-detail {
@@ -56,6 +80,11 @@
         width: 80%;
         mat-card {
           padding-right: 45px;
+        }
+        @media screen and (max-width: 720px) {
+          width: 100%;
+          padding: 0;
+          margin: 10px 0;
         }
         .section-title {
           font-family: Sansation-Regular;
@@ -67,6 +96,10 @@
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
+          &.resttime {
+            text-align: center;
+            font-weight: bold;
+          }
         }
         .section-speaker {
           font-family: Sansation-Regular;
