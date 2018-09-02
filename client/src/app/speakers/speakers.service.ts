@@ -13,6 +13,7 @@ const SPEAKERS = [
     fb: '',
     twitter: 'https://twitter.com/ladyleet',
     github: '',
+    website: '',
   },
   {
     img: 'assets/images/speakers/will.jpg',
@@ -25,6 +26,7 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/will.fans/',
     twitter: 'https://twitter.com/Will_Huang',
     github: '',
+    website: 'https://blog.miniasp.com/',
   },
   {
     img: 'assets/images/speakers/kevin.jpg',
@@ -37,6 +39,7 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/CKNotepad',
     twitter: 'https://twitter.com/chgc',
     github: 'http://github.com/chgc',
+    website: 'https://blog.kevinyang.net/',
   },
   {
     img: 'assets/images/speakers/Jecelyn.jpg',
@@ -54,6 +57,7 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/jecelyn',
     twitter: 'https://twitter.com/JecelynYeen',
     github: '',
+    website: '',
   },
   {
     img: 'assets/images/speakers/mike.jpg',
@@ -67,6 +71,7 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/fullstackledder/',
     twitter: '',
     github: 'https://github.com/wellwind',
+    website: 'https://wellwind.idv.tw/blog/',
   },
   {
     img: 'assets/images/speakers/poy.jpg',
@@ -87,6 +92,7 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/poychang',
     twitter: 'https://twitter.com/poychang',
     github: '',
+    website: 'https://poychang.github.io/',
   },
   {
     img: 'assets/images/speakers/james.jpg',
@@ -114,6 +120,7 @@ const SPEAKERS = [
     fb: '',
     twitter: '',
     github: '',
+    website: 'https://dotblogs.com.tw/jamesfu',
   },
   {
     img: 'assets/images/speakers/amos.jpg',
@@ -133,6 +140,7 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/cssCoke',
     twitter: '',
     github: '',
+    website: 'http://csscoke.com/',
   },
 ];
 

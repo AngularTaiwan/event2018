@@ -7,7 +7,8 @@
         <li class="schedule-item" *ngFor="let session of sessions">
           <div class="section-box">
             <div class="time-info">
-              <span class="time">{{ session.periodStart }} <i class="d-sm-none d-lg-inline">-</i> {{ session.periodEnd }}</span>
+              <span class="time">{{ session.periodStart }} <i class="d-sm-none d-lg-inline">-</i> {{
+                session.periodEnd }}</span>
             </div>
             <div class="section-detail">
               <mat-card>
@@ -20,7 +21,6 @@
                 </div>
                 <mat-card-content *ngIf="session.description">
                   <p class="section-description" [innerHTML]="session.description">
-
                   </p>
                 </mat-card-content>
               </mat-card>
