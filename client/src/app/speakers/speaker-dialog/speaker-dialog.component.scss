@@ -41,9 +41,16 @@
   .speaker-link {
     text-align: center;
     margin: 5px auto;
+    background: #fafafa;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    font-family: Sansation-Regular;
+    font-size: 14px;
+    color: rgba(1, 22, 39, 0.6);
+    letter-spacing: 0.25px;
+    text-align: center;
+    .svg-icon path {
+      fill: #ff0000;
+    }
   }
-}
-
-:host ::ng-deep .mat-dialog-container{
-  border-radius: 5px;
 }

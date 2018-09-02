@@ -3,15 +3,15 @@
     <div class="photo-wrapper">
       <img [src]="speaker.img" alt="John Doe" class="img-responsive">
     </div>
-    <div class="speaker-link d-none d-sm-block">
+    <div class="d-none d-sm-block">
       <a class="speaker-link col-md-12" *ngIf="speaker.fb" [href]="speaker.fb" mat-stroked-button color="primary">
-        <img src="../assets/images/facebook.svg" /> Facebook
+        <img class="svg-icon" src="../assets/images/facebook.svg" /> Facebook
       </a>
       <a class="speaker-link col-md-12" *ngIf="speaker.twitter" [href]="speaker.twitter" mat-stroked-button color="primary">
-        <img src="../assets/images/twitter.svg" /> Twitter
+        <img class="svg-icon" src="../assets/images/twitter.svg" /> Twitter
       </a>
       <a class="speaker-link col-md-12" *ngIf="speaker.github" [href]="speaker.github" mat-stroked-button color="primary">
-        <img src="../assets/images/github.svg" /> Github
+        <img class="svg-icon" src="../assets/images/github.svg" /> Github
       </a>
     </div>
   </div>
@@ -20,15 +20,15 @@
     <p class="description col-md-12" [innerHTML]="speaker.about | safe: 'html'">
     </p>
   </div>
-  <div class="speaker-link d-sm-none">
+  <div class="d-sm-none">
     <a class="speaker-link col-md-12" *ngIf="speaker.fb" [href]="speaker.fb" mat-stroked-button color="primary">
-      <img src="../assets/images/facebook.svg" /> Facebook
+      <img class="svg-icon" src="../assets/images/facebook.svg" /> Facebook
     </a>
     <a class="speaker-link col-md-12" *ngIf="speaker.twitter" [href]="speaker.twitter" mat-stroked-button color="primary">
-      <img src="../assets/images/twitter.svg" /> Twitter
+      <img class="svg-icon" src="../assets/images/twitter.svg" /> Twitter
     </a>
     <a class="speaker-link col-md-12" *ngIf="speaker.github" [href]="speaker.github" mat-stroked-button color="primary">
-      <img src="../assets/images/github.svg" /> Github
+      <img class="svg-icon" src="../assets/images/github.svg" /> Github
     </a>
   </div>
 </section>
