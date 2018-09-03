@@ -85,10 +85,9 @@ const sessions: Session[] = [
     periodStart: '14:30',
     periodEnd: '15:00',
     speaker: 'Amos',
-    topic: '從網頁設計師的角度看 Angular',
-    description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small,
-    agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-    bred for hunting.`,
+    topic: '從前端設計角度來看 Angular',
+     // tslint:disable-next-line:max-line-length
+    description: `在開發過程中前端設計師往往站在門外看程式設計師處理一堆看似火星文的原始碼，遇到問題往往都是鴨子聽雷，送出去的東西被改壞了被送回來說『你要負責修好 !』，這些狀況屢見不鮮，現在你可以將你要的視覺效果掌控在你自己手上，團隊開發往往因為視覺設計師缺乏組件開發技能而導致需要工程師二次加工，現在視覺專家的你其實只要利用熟悉的CSS觀念就能輕鬆改變這個過程，放開你的心結，讓我們一起開心的擁抱 Angular 吧。`,
     hide: false
   },
   {
