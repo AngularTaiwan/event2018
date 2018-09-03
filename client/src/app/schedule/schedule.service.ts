@@ -16,6 +16,7 @@ const sessions: Session[] = [
     topic: 'How Reactive Programming makes developer lives easier. ',
     description: `Reactive programming paradigms are all around us. So why does is it awesome? We'll explore reactive programming in standards, frameworks and libraries and talk about how to think reactively.
     <br /><br />
+    // tslint:disable-next-line:max-line-length
     Then we'll take a more practical approach and talk about how to utilize reactive programming patterns with an abstraction like RxJS, a domain specific language for reacting to events and how using this abstraction can make your development life much easier in Angular.`,
     hide: false
   },
@@ -29,6 +30,7 @@ const sessions: Session[] = [
     periodEnd: '10:50',
     speaker: 'Will',
     topic: 'Angular 7 全新功能探索 ',
+    // tslint:disable-next-line:max-line-length
     description: `Angular 團隊預計在 2018 十月推出 v7.0 版，這個版本預期將帶來驚豔眾人的 Ivy 渲染引擎與全新建置基礎架構。不但大幅降低應用程式大小，提升執行速度，在開發流程上的效率改善更是顯著。本次演說將為大家帶來 Angular 7 各種全新特性與改進項目，讓你體驗 Angular 開發框架的強大魅力！`,
     hide: false
   },
@@ -42,6 +44,7 @@ const sessions: Session[] = [
     periodEnd: '11:50',
     speaker: 'Kevin Yang',
     topic: '改善 Angular 開發流程：你所不知道的 Schematics 程式碼產生器',
+    // tslint:disable-next-line:max-line-length
     description: `Angular CLI 團隊所開發的 Schematics 工具，讓 Angular 在開發上多了無限的可能性，目前已經有許多的套件都將 schematics 視為標準的操作流程，透過 schematics 來減少程式碼初始化的時間。那企業該如何透過 Schematics 來幫助團隊更有效的開發系統呢，透過本次的分享，能讓大家更能了解 Schematics  的奧妙之處`,
     hide: false
   },
@@ -54,10 +57,9 @@ const sessions: Session[] = [
     periodStart: '13:00',
     periodEnd: '13:30',
     speaker: 'Mike',
-    topic: '打造企業級應用的利器：Angular CDK 輕鬆打造高品質元件',
-    description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small,
-    agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-    bred for hunting.`,
+    topic: 'Angular CDK 火力上陣',
+    // tslint:disable-next-line:max-line-length
+    description: `Angular CDK 是用來開發元件的工具庫，也是許多知名元件庫的核心底層；身為 Angular 開發人員，我們也許不需要使用任何現成的元件庫，但前端需求日新月異，一定會面臨到畫面互動的挑戰，Angular CDK 正是用來解決複雜互動的一帖良藥！本次分享將透過 Angular CDK 火力展示如何透過短短數行程式碼，打造出各式各樣複雜的應用功能，保證讓你愛不釋手！`,
     hide: false
   },
   {
@@ -113,10 +115,10 @@ const sessions: Session[] = [
     periodStart: '16:00',
     periodEnd: '16:30',
     speaker: 'Poy',
-    topic: '決戰 Angular 組態管理：你所不知道的 10 種設定檔載入方式 ',
-    description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small,
-    agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-    bred for hunting.`,
+    topic: '原來 Angular 可以這樣玩設定',
+    description: `"設定"這個動作劃開了環境與程式碼之間的耦合，透過"設定"我們不僅僅能在開發時期更容易的切換測試環境，也可以在系統上線後，讓應用程式根據需求而改變啟動時所需要的設定值。
+
+    不論你是在開發產品，或是開發企業需求導向的應用，掌握"設定"的技巧，能讓你的應用程式更有彈性，適應更多元的環境變化。`,
     hide: false
   },
   {
