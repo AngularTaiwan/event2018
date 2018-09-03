@@ -100,10 +100,9 @@ const sessions: Session[] = [
     periodStart: '15:15',
     periodEnd: '15:45',
     speaker: 'James Fu',
-    topic: '企業產品開發導入 Angular 經驗談',
-    description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small,
-    agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-    bred for hunting.`,
+    topic: '從 webform 走向 Angular',
+    // tslint:disable-next-line:max-line-length
+    description: `A1 商務應用雲是個雲端 SaaS 服務 , 在此次課程中 , 將會介紹為何 A1 開發團隊, 需要將產品從傳統的 webform , 花費一年的時間將產品整個改到 Angular , 這期間遇到那些坑洞和所得到的效益 , 將會在這次中跟大家做個分享`,
     hide: false
   },
   {
