@@ -27,8 +27,8 @@ export class AnchorClickDirective {
   anchorClickHandler(anchorId) {
     const section = document.querySelector(anchorId);
     const header = document.querySelector('.fixed-header');
-    console.dir(section);
-    console.dir(header);
+    // console.dir(section);
+    // console.dir(header);
     const offsetTop =
       section.offsetTop + section.offsetParent.offsetTop - header.clientHeight;
     // $nav = [].slice.call(

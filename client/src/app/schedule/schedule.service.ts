@@ -10,13 +10,23 @@ export interface Session {
 }
 const sessions: Session[] = [
   {
+    periodStart: '08:30',
+    periodEnd: '08:50',
+    topic: '報到'
+  },
+  {
+    periodStart: '08:50',
+    periodEnd: '09:00',
+    topic: 'Opening'
+  },
+  {
     periodStart: '09:00',
     periodEnd: '09:50',
     speaker: 'Tracy Lee',
     topic: 'How Reactive Programming makes developer lives easier. ',
+    // tslint:disable-next-line:max-line-length
     description: `Reactive programming paradigms are all around us. So why does is it awesome? We'll explore reactive programming in standards, frameworks and libraries and talk about how to think reactively.
     <br /><br />
-    // tslint:disable-next-line:max-line-length
     Then we'll take a more practical approach and talk about how to utilize reactive programming patterns with an abstraction like RxJS, a domain specific language for reacting to events and how using this abstraction can make your development life much easier in Angular.`,
     hide: false
   },
@@ -28,7 +38,7 @@ const sessions: Session[] = [
   {
     periodStart: '10:00',
     periodEnd: '10:50',
-    speaker: 'Will',
+    speaker: 'Will 保哥',
     topic: 'Angular 7 全新功能探索 ',
     // tslint:disable-next-line:max-line-length
     description: `Angular 團隊預計在 2018 十月推出 v7.0 版，這個版本預期將帶來驚豔眾人的 Ivy 渲染引擎與全新建置基礎架構。不但大幅降低應用程式大小，提升執行速度，在開發流程上的效率改善更是顯著。本次演說將為大家帶來 Angular 7 各種全新特性與改進項目，讓你體驗 Angular 開發框架的強大魅力！`,
@@ -86,7 +96,7 @@ const sessions: Session[] = [
     periodEnd: '15:00',
     speaker: 'Amos',
     topic: '從前端設計角度來看 Angular',
-     // tslint:disable-next-line:max-line-length
+    // tslint:disable-next-line:max-line-length
     description: `在開發過程中前端設計師往往站在門外看程式設計師處理一堆看似火星文的原始碼，遇到問題往往都是鴨子聽雷，送出去的東西被改壞了被送回來說『你要負責修好 !』，這些狀況屢見不鮮，現在你可以將你要的視覺效果掌控在你自己手上，團隊開發往往因為視覺設計師缺乏組件開發技能而導致需要工程師二次加工，現在視覺專家的你其實只要利用熟悉的CSS觀念就能輕鬆改變這個過程，放開你的心結，讓我們一起開心的擁抱 Angular 吧。`,
     hide: false
   },
