@@ -4,13 +4,13 @@
       <img [src]="speaker.img" alt="John Doe" class="img-responsive">
     </div>
     <div class="d-none d-sm-block">
-      <a class="speaker-link col-md-12" *ngIf="speaker.fb" [href]="speaker.fb" mat-stroked-button color="primary">
+      <a class="speaker-link col-md-12" *ngIf="speaker.fb" [href]="speaker.fb" mat-stroked-button color="primary" target="_blank">
         <img class="svg-icon" src="../assets/images/facebook.svg" /> Facebook
       </a>
-      <a class="speaker-link col-md-12" *ngIf="speaker.twitter" [href]="speaker.twitter" mat-stroked-button color="primary">
+      <a class="speaker-link col-md-12" *ngIf="speaker.twitter" [href]="speaker.twitter" mat-stroked-button color="primary"  target="_blank">
         <img class="svg-icon" src="../assets/images/twitter.svg" /> Twitter
       </a>
-      <a class="speaker-link col-md-12" *ngIf="speaker.github" [href]="speaker.github" mat-stroked-button color="primary">
+      <a class="speaker-link col-md-12" *ngIf="speaker.github" [href]="speaker.github" mat-stroked-button color="primary"  target="_blank">
         <img class="svg-icon" src="../assets/images/github.svg" /> Github
       </a>
     </div>

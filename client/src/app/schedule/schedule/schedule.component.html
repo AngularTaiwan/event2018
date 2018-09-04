@@ -5,6 +5,7 @@
       <ul class="schedule col-12">
 
         <li class="schedule-item" *ngFor="let session of sessions">
+          <span class="anchor" id="{{session.speakerId}}"></span>
           <div class="section-box">
             <div class="time-info">
               <span class="time">{{ session.periodStart }} <i class="d-sm-none d-lg-inline">-</i> {{
@@ -14,13 +15,15 @@
               <mat-card>
                 <div class="row" *ngIf="session.speaker">
                   <h2 class="section-title col-9" [title]="session.topic">{{ session.topic }}</h2>
-                  <span class="section-speaker col-3">{{ session.speaker }}</span>
+                  <span class="section-speaker col-3" (click)="openDialog(session.speaker)">{{ session.speaker
+                    }}
+                  </span>
                 </div>
-                <div class="row" *ngIf="!session.speaker">
-                  <h2 class="section-title col-12 resttime">{{ session.topic }}</h2>
+                <div class=" row " *ngIf="!session.speaker ">
+                  <h2 class="section-title col-12 resttime ">{{ session.topic }}</h2>
                 </div>
-                <mat-card-content *ngIf="session.description">
-                  <p class="section-description" [innerHTML]="session.description">
+                <mat-card-content *ngIf="session.description ">
+                  <p class="section-description " [innerHTML]="session.description ">
                   </p>
                 </mat-card-content>
               </mat-card>

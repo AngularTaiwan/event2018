@@ -1,15 +1,18 @@
 import { Directive, HostListener, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: 'a[href]'
+  // tslint:disable-next-line:directive-selector
+  selector: 'a[href],[speaker]'
 })
 export class AnchorClickDirective {
   @HostListener('click', ['$event.target'])
   onClick(btn) {
-    const href = this.el.nativeElement.hash;
+    const href =
+      this.el.nativeElement.hash || this.el.nativeElement.attributes.hash.value;
     if (href.indexOf('#') === -1) {
       return;
     }
+
     if (
       this.el.nativeElement.attributes['data-toggle'] &&
       this.el.nativeElement.attributes['data-toggle'].length

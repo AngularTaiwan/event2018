@@ -1,4 +1,5 @@
 export interface ISpeaker {
+  id: string;
   img: string;
   name: string;
   company: string;
