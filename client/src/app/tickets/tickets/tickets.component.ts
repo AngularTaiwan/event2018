@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Ticket } from './ticket/ticket';
+import { Ticket } from '../ticket/ticket';
 import { TranslateService } from '@ngx-translate/core';
 
 const ticketsInfomation = {
