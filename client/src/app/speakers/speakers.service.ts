@@ -23,7 +23,7 @@ const SPEAKERS = [
     company: '多奇數位創意有限公司',
     title: '技術總監',
     // tslint:disable-next-line:max-line-length
-    about: `現任多奇數位創意有限公司技術總監。連續 10 度當選微軟最有價值專家 (ASP.NET/IIS MVP)。早期專研 LAMP 相關技術，自 2005 年起轉向 Microsoft .NET Platform 開發技術，熟悉各式 Web 開發技術、網站效能調校、SQL Server、網站內容管理系統、網路系統整合。`,
+    about: `現任多奇數位創意有限公司技術總監。連續 11 度當選微軟最有價值專家 (ASP.NET/IIS MVP)。早期專研 LAMP 相關技術，自 2005 年起轉向 Microsoft .NET Platform 開發技術，熟悉各式 Web 開發技術、網站效能調校、SQL Server、網站內容管理系統、網路系統整合。`,
     hide: false,
     fb: 'https://www.facebook.com/will.fans/',
     twitter: 'https://twitter.com/Will_Huang',
