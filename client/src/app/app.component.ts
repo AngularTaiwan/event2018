@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material';
 })
 export class AppComponent implements OnInit {
   constructor(
-    translate: TranslateService,
+    private translate: TranslateService,
     private swUpdate: SwUpdate,
     private snackBar: MatSnackBar
   ) {
@@ -32,8 +32,13 @@ export class AppComponent implements OnInit {
     if (this.swUpdate.isEnabled) {
       this.swUpdate.available.subscribe(() => {
         const snackBarRef = this.snackBar.open(
-          'New version available. Update?',
-          'Update'
+          this.translate.instant('needUpdate'),
+          '',
+          {
+            duration: 1500,
+            horizontalPosition: 'center',
+            verticalPosition: 'top'
+          }
         );
         snackBarRef.afterDismissed().subscribe(() => {
           window.location.reload();
