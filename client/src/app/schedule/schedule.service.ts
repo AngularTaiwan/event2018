@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 export interface Session {
   periodStart: string;
   periodEnd: string;
+  keynote?: boolean;
   speakerId: string;
   speaker: string;
   topic: string;
@@ -23,6 +24,7 @@ const sessions: Session[] = [
   {
     periodStart: '09:10',
     periodEnd: '10:00',
+    keynote: true,
     speakerId: 'TracyLee',
     speaker: 'Tracy Lee',
     topic: 'How Reactive Programming makes developer lives easier. ',

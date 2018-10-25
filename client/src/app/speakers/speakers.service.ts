@@ -6,6 +6,7 @@ const SPEAKERS = [
     id: 'TracyLee',
     img: 'assets/images/speakers/tracylee.png',
     name: 'Tracy Lee',
+    keynote: true,
     company: 'This Dot, Inc.',
     title: 'Co-Founder',
     // tslint:disable-next-line:max-line-length
@@ -14,7 +15,7 @@ const SPEAKERS = [
     fb: '',
     twitter: 'https://twitter.com/ladyleet',
     github: '',
-    website: '',
+    website: ''
   },
   {
     id: 'Will',
@@ -28,7 +29,7 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/will.fans/',
     twitter: 'https://twitter.com/Will_Huang',
     github: '',
-    website: 'https://blog.miniasp.com/',
+    website: 'https://blog.miniasp.com/'
   },
   {
     id: 'KevinYang',
@@ -42,7 +43,7 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/CKNotepad',
     twitter: 'https://twitter.com/chgc',
     github: 'http://github.com/chgc',
-    website: 'https://blog.kevinyang.net/',
+    website: 'https://blog.kevinyang.net/'
   },
   {
     id: 'JecelynYeen',
@@ -61,7 +62,7 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/jecelyn',
     twitter: 'https://twitter.com/JecelynYeen',
     github: '',
-    website: '',
+    website: ''
   },
   {
     id: 'MikeHuang',
@@ -76,7 +77,7 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/fullstackledder/',
     twitter: '',
     github: 'https://github.com/wellwind',
-    website: 'https://wellwind.idv.tw/blog/',
+    website: 'https://wellwind.idv.tw/blog/'
   },
   {
     id: 'PoyChang',
@@ -98,7 +99,7 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/poychang',
     twitter: 'https://twitter.com/poychang',
     github: '',
-    website: 'https://poychang.github.io/',
+    website: 'https://poychang.github.io/'
   },
   {
     id: 'JamesFu',
@@ -127,7 +128,7 @@ const SPEAKERS = [
     fb: '',
     twitter: '',
     github: '',
-    website: 'https://dotblogs.com.tw/jamesfu',
+    website: 'https://dotblogs.com.tw/jamesfu'
   },
   {
     id: 'Amos',
@@ -148,8 +149,8 @@ const SPEAKERS = [
     fb: 'https://www.facebook.com/cssCoke',
     twitter: '',
     github: '',
-    website: 'http://csscoke.com/',
-  },
+    website: 'http://csscoke.com/'
+  }
 ];
 
 @Injectable()
@@ -173,7 +174,7 @@ export class SpeakersService {
       hide: false,
       fb: '',
       twitter: '',
-      github: '',
+      github: ''
     };
     return Array.from({ length: speakerCount }, (v, k) => emptySpeaker);
   }

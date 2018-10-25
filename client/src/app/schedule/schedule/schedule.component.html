@@ -11,6 +11,8 @@
               <span class="time">{{ session.periodStart }} <i class="d-sm-none d-lg-inline">-</i>
                 {{
                 session.periodEnd }}</span>
+              <br />
+              <span class="keynote" *ngIf="session.keynote">Keynote</span>
             </div>
             <div class="section-detail">
               <mat-card>

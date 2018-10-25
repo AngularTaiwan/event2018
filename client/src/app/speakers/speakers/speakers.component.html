@@ -9,9 +9,10 @@
           </div>
           <div class="speaker-text" speaker [attr.hash]="'#'+speaker.id">
             <h3 class="name">{{ speaker.name }}</h3>
+            <h4 class="name" *ngIf="speaker.keynote">Keynote Speaker</h4>
             <p class="des text-alt">
               <small>{{speaker.company}}</small>
-              <br/>
+              <br />
               <small>{{speaker.title}}</small>
             </p>
             <p class="about" [innerHTML]="speaker.about"></p>

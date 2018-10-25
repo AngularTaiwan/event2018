@@ -24,6 +24,7 @@
   </div>
   <div class="speaker-info col-12 col-sm-7 col-md-8">
     <h2>{{ speaker.name }}</h2>
+    <h3 *ngIf="speaker.keynote">Keynote Speaker</h3>
     <p class="description col-md-12" [innerHTML]="speaker.about | safe: 'html'">
     </p>
   </div>
