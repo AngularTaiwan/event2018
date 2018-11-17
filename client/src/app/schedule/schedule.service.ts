@@ -36,7 +36,7 @@ const sessions: Session[] = [
   },
   {
     periodStart: '10:00',
-    periodEnd: '11:10',
+    periodEnd: '10:10',
     topic: '休息時間'
   },
   {
