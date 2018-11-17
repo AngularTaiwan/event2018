@@ -3,31 +3,44 @@
   <div class="container">
     <div class="row justify-content-cneter justify-content-md-center">
       <ul class="schedule col-12">
-
         <li class="schedule-item" *ngFor="let session of sessions">
           <span class="anchor" id="{{session.speakerId}}"></span>
           <div class="section-box">
             <div class="time-info">
-              <span class="time">{{ session.periodStart }} <i class="d-sm-none d-lg-inline">-</i>
-                {{
-                session.periodEnd }}</span>
+              <span class="time"
+                >{{ session.periodStart }}
+                <i class="d-sm-none d-lg-inline">-</i>
+                {{ session.periodEnd }}</span
+              >
               <br />
               <span class="keynote" *ngIf="session.keynote">Keynote</span>
             </div>
             <div class="section-detail">
               <mat-card>
                 <div class="row" *ngIf="session.speaker">
-                  <h2 class="section-title col-10" [title]="session.topic">{{ session.topic }}</h2>
-                  <span class="section-speaker col-2" (click)="openDialog(session.speaker)">{{
-                    session.speaker
-                    }}
+                  <h2 class="section-title col-10" [title]="session.topic">
+                    {{ session.topic }}
+                  </h2>
+                  <span
+                    class="section-speaker col-2"
+                    (click)="openDialog(session.speaker)"
+                    >{{ session.speaker }}
                   </span>
                 </div>
-                <div class=" row " *ngIf="!session.speaker ">
-                  <h2 class="section-title col-12 resttime ">{{ session.topic }}</h2>
+                <div class="row" *ngIf="!session.speaker">
+                  <h2 class="section-title col-12 resttime ">
+                    {{ session.topic }}
+                  </h2>
                 </div>
-                <mat-card-content *ngIf="session.description ">
-                  <p class="section-description " [innerHTML]="session.description ">
+                <mat-card-content *ngIf="session.description">
+                  <p
+                    class="section-description "
+                    [innerHTML]="session.description"
+                  ></p>
+                  <p *ngIf="session.slide">
+                    <a [href]="session.slide" target="_blank">{{
+                      'slide' | translate
+                    }}</a>
                   </p>
                 </mat-card-content>
               </mat-card>

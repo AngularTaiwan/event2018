@@ -3,6 +3,7 @@
   "session": "SESSIONS",
   "ticket": "PRICE",
   "location": "LOCATION",
+  "slide": "Slide Links",
   "needUpdate": "New version available. Update now!",
   "speakers": {
     "info": "Speaker Info Coming Soon"
