@@ -41,7 +41,7 @@ const SPEAKERS = [
     about: `目前擔任 Angular Taiwan、Angular Girls Taiwan 社群管理者，Angular 線上讀書會主持人。2018 年榮獲 Angular/Web GDE (Google Developer Expert) 開發專家。微軟最有價值專家 (Visual Studio and Development Technologies)。由於工作性質關係，熟悉多領域的相關知識，本身熱衷於程式開發，分享任何新奇的技術資訊。`,
     hide: false,
     fb: 'https://www.facebook.com/CKNotepad',
-    twitter: 'https://twitter.com/chgc',
+    twitter: 'https://twitter.com/yoKevinYang',
     github: 'http://github.com/chgc',
     website: 'https://blog.kevinyang.net/'
   },
